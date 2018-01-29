@@ -1,3 +1,15 @@
+$montserrat: 'Montserrat-Regular', sans-serif;
+$montserratLight: 'Montserrat-Light', sans-serif;
+$opensans: 'OpenSansRegular', sans-serif;
+
+@mixin hoverOpacity {
+    transition: opacity 0.2s;
+    &:hover, &:focus, &:active{
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+}
+
 html{
     width: 100%;
 }
@@ -8,14 +20,28 @@ body{
     border: 0;
     font-weight: inherit;
     font-style: inherit;
-    font-family: inherit;
+    font-family: $opensans;
+    color: #37383E;
     text-align: left;
     vertical-align: baseline;
-    //font-family: 'Open Sans', sans-serif;
-    //font-family: 'PT Sans', sans-serif;
-    //font-family: 'Roboto', sans-serif;
-    //font-family: 'Source Sans Pro', sans-serif;
-    //font-family: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2, h3, h4 {
+    margin: 0;
+    font-family: $montserratLight;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 36px; 
+}
+
+p {
+    margin: 0;
 }
 
 a {
@@ -39,12 +65,11 @@ textarea{
     }
 }
 
-%clearfix {
-    *zoom: 1;
-    &:after {
-        content: '';
-        display: table;
-        line-height: 0;
-        clear: both;
-    }
+.paddingtop130 {
+    padding-top: 130px;
+}
+
+.dflexcolumn {
+    display: flex;
+    flex-direction: column;
 }

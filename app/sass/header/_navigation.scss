@@ -1,0 +1,29 @@
+.header__nav {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 25px;
+
+	.menu,
+	.phone {
+		margin-top: 6px;
+	}
+
+	.menu a,
+	.phone span {
+		font-family: $montserratLight;
+		color: white;
+	}
+
+	.menu a {
+		font-size: 18px;
+		@include hoverOpacity;
+
+		&:first-child {
+			margin-right: 55px;
+		}
+	}
+
+	.phone span {
+		font-size: 24px;
+	}
+}

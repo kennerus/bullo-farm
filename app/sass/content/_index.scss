@@ -1,2 +1,26 @@
+.catalogue-index {
+	position: relative;
+	margin-top: 60px;
+	background-image: url(../img/catalogue-index.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
+.catalogue-index__head {
+	h2 {
+		color: white;
+	}
+}
 
+.down {
+	position: absolute;
+	top: 17px;
+	left: calc(50% - 40px);
+}
+.catalogue__slider {
+	margin: 0 -16px;
+}
+.catalogue__slide {
+	margin: 0 16px;
+	background-color: white;
+}
