@@ -1,37 +1,43 @@
-// contacts subject list
-var subject = document.getElementById('header_select');
-var subjectList = document.querySelector('.filter__select_list');
-
 // open subject list
-subject.addEventListener('click', function() {
-    subject.querySelector('img').classList.toggle('rotate180');
-    subjectList.classList.toggle('open_subject');
+var id = document.getElementById('header_select');
 
-    if (subjectList.style.maxHeight) {
-        subjectList.style.maxHeight = null;
+function openList(subject, subjectList) {
+    var list = subject.querySelector('.' + subjectList);
+
+    subject.querySelector('img').classList.toggle('rotate180');
+    list.classList.toggle('open_list');
+
+    if (list.style.maxHeight) {
+        list.style.maxHeight = null;
     }
     else {
-        subjectList.style.maxHeight = subjectList.scrollHeight + 30 + "px";
+        list.style.maxHeight = list.scrollHeight + 30 + "px";
     }
-})
+}
 
 // change subject
-function replaceSubject() {
-    var activeSubject = document.querySelector('.filter__select_active');
-    var subjectElement = subjectList.querySelectorAll('li');
+function replaceSubject(subject, subjectList, activeSubject) {
+    var list = subject.querySelector('.' + subjectList);
+    var declaredSubject = subject.querySelector('.' + activeSubject);
+    var subjectElement = list.querySelectorAll('li');
 
-    for(var i = 0; i < subjectElement.length; i++) {
-        subjectElement[i].addEventListener('click', function() {
-            activeSubject.innerHTML = activeSubject.innerHTML.replace(activeSubject.innerHTML, this.innerHTML);
+    for (var i = 0; i < subjectElement.length; i++) {
+        subjectElement[i].addEventListener('click', function () {
+            declaredSubject.innerHTML = declaredSubject.innerHTML.replace(declaredSubject.innerHTML, this.innerHTML);
         });
     }
 }
-replaceSubject();
 
-$(document).ready(function() {
+id.addEventListener('click', function() {
+    openList(id, 'filter__select_list');
+});
+
+replaceSubject(id, 'filter__select_list', 'filter__select_active');
+
+$(document).ready(function () {
     $('.catalogue__slider').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
         appendArrows: $('.catalogue-index__nav')
     })
-})
+});

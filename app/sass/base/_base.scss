@@ -1,3 +1,6 @@
+$montserratBlack: 'Montserrat-Black', sans-serif;
+$montserratBold: 'Montserrat-Bold', sans-serif;
+$montserratExtraBold: 'Montserrat-ExtraBold', sans-serif;
 $montserrat: 'Montserrat-Regular', sans-serif;
 $montserratLight: 'Montserrat-Light', sans-serif;
 $opensans: 'OpenSansRegular', sans-serif;
@@ -65,11 +68,27 @@ textarea{
     }
 }
 
-.paddingtop130 {
-    padding-top: 130px;
-}
-
 .dflexcolumn {
     display: flex;
     flex-direction: column;
+}
+
+.fs13 {
+    font-size: 13px;
+}
+
+.fs15 {
+    font-size: 15px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.dashedBorder {
+    border-bottom: 1px dashed rgba(146,39,143,0.5);
+}
+
+.greytext {
+    color: #788089;
 }

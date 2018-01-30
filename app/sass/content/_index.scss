@@ -1,26 +1,405 @@
 .catalogue-index {
 	position: relative;
-	margin-top: 60px;
+	margin-top: 70px;
+	padding-top: 140px;
+	padding-bottom: 60px;
 	background-image: url(../img/catalogue-index.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .catalogue-index__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
 	h2 {
 		color: white;
+	}
+
+	.catalogue-index__nav {
+		width: 123px;
+		height: 61px;
 	}
 }
 
 .down {
 	position: absolute;
-	top: 17px;
+	top: 22px;
 	left: calc(50% - 40px);
 }
+
 .catalogue__slider {
 	margin: 0 -16px;
+	margin-top: 18px
 }
+
 .catalogue__slide {
 	margin: 0 16px;
 	background-color: white;
+	border: 1px solid #EBECF0;
+	border-radius: 2px;
+	transition: box-shadow 0.2s;
+
+	&:hover {
+		box-shadow: 0 7px 15px 0 rgba(102,35,100,0.38);
+		transition: box-shadow 0.2s;
+
+		.buy-button {
+			box-shadow: 0 3px 6px 0 rgba(95,26,93,0.5);
+			transition: box-shadow 0.2s;
+		}
+	}
+}
+
+.catalogue__slide_header {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-left: 46px;
+
+	.slide__img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 260px;
+		height: 176px;
+	}
+
+	.cripto-icons {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			margin-top: 8px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.catalogue__slide_desc {
+	margin-top: 22px;
+
+	p, .farm-title {
+		font-family: $montserrat;
+	}
+
+	p {
+		font-size: 13px;
+		color: #788089;
+	}
+
+	span {
+		color: #37383E;
+	}
+
+	.purple-text {
+		color: #92278F;
+	}
+
+	.farm-title,
+	.farm-cost,
+	.availability {
+		margin: 0 22px;
+		padding: 10px 0;
+	}
+
+	.farm-income,
+	.farm-cost,
+	.farm-rent {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.income__month {
+		background-color: #E8EAEC;
+	}
+
+	.income__year {
+		background-color: #F4F4F4;
+	}
+
+	.income__month,
+	.income__year {
+		margin: 0;
+		padding: 10px 22px;
+	}
+
+	.farm-rent {
+		padding: 10px 0;
+	}
+
+	.rent__month,
+	.rent__service {
+		padding: 0 22px;
+	}
+
+	.farm-cost,
+	.farm-rent {
+		border-bottom: 1px solid #EBECF0;
+	}
+
+	.income__month,
+	.income__year,
+	.farm-cost p,
+	.farm-cost .buy-button,
+	.rent__month,
+	.rent__service {
+		width: 50%;
+	}
+
+	.income__month p,
+	.income__year p,
+	.farm-cost p,
+	.rent__month p,
+	.rent__service p {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.rent__month {
+		border-right: 1px solid rgba(229,229,229,1);
+	}
+
+	.aval {
+		display: flex;
+
+		img {
+			margin-right: 10px;
+		}
+	}
+
+	.buy-button {
+		color: white;
+		background-color: #92278F;
+		border: none;
+		border-radius: 2px;
+		transition: box-shadow 0.2s;
+	}
+}
+
+.catalogue-index__all {
+	margin-top: 50px;
+
+	.all-farms {
+		width: 270px;
+		padding: 15px 0;
+		font-family: $montserratLight;
+		font-size: 22px;
+		color: white;
+		border: 0;
+		border-radius: 2px;
+		background-color: #92278F;
+	}
+}
+
+.cloud {
+	margin-top: 30px;
+
+	.cloud__title {
+		text-align: center;
+	}
+}
+
+.cloud__blocks {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.cloud__block {
+	width: 350px;
+	padding-top: 23px;
+	padding-right: 32px;
+	padding-bottom: 28px;
+	padding-left: 22px;
+	background-color: #FFFFFF;
+	border: 1px solid #EBECF0;
+	border-radius: 2px;
+
+	&:hover {
+		box-shadow: 0 15px 33px 0 rgba(153,130,161,0.18);
+	}
+
+	.cloud__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.cloud__block_title {
+			font-size: 24px
+		}
+	}
+
+	.cloud__body {
+		td {
+			position: relative;
+			width: 100px;
+			padding-top: 7px;
+			line-height: 1.2;
+			background: white;
+			vertical-align: bottom;
+		}
+
+		.width160 {
+			min-width: 160px;
+		}
+
+		.tddashedbot {
+			min-width: 10px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				display: block;
+				left: -1px;
+				bottom: 3px;
+				width: 135%;
+				height: 1px;
+				border-bottom: 1px dashed #9B9B9B;;
+			}
+		}
+
+		.automatic {
+			td {
+				width: 100%;
+				padding-top: 20px;
+			}
+		}
+	}
+
+	.cloud__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-top: 30px;
+		padding-top: 20px;
+		border-top: 1px solid #EBECF0;
+
+		.arend {
+			width: 160px;
+			padding: 10px 0;
+			color: white;
+			background-color: #92278F;
+			border: none;
+			border-radius: 2px;
+			cursor: pointer;
+		}
+		
+		p {
+			font-size: 24px;
+			line-height: 1;
+
+			span {
+				display: block;
+				width: 100%;
+				margin-top: 5px;
+			}
+		}
+	}
+}
+
+.techpark {
+	margin-top: 26px;
+	background-image: url(../img/Bitmap.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: (50%);
+
+	h2 {
+		position: relative;
+		font-family: $montserratBlack;
+		font-size: 72px;
+		color: #E8EAEC;
+		text-transform: uppercase;
+
+		span {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 2px;
+			text-transform: none;
+			font-size: 36px;
+			color: #37383E;
+		}
+	}
+}
+
+.techpark__desc {
+	padding-top: 90px;
+	
+	p {
+		max-width: 350px;
+		width: 100%;
+		margin-top: 30px;
+		line-height: 1.25;
+	}
+
+	a {
+		display: block;
+		width: 145px;
+		margin-top: 30px;
+		padding: 10px 0;
+		font-family: $montserrat;
+		color: #3B424B;
+		text-align: center;
+		border: 1px solid #92278F;
+		border-radius: 2px;
+	}
+}
+
+.techpark__features {
+	position: relative;
+	margin-top: 125px;
+	background-color: white;
+
+	h2 {
+		position: absolute;
+		top: -58px;
+		z-index: 0;
+	}
+}
+
+.features__blocks {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+
+	.features__block {
+		width: 254px;
+		height: 273px;
+		padding-top: 22px;
+		padding-right: 10px;
+		padding-left: 23px;
+		background-color: #F4F4F4;
+
+		img {
+			height: 57px
+		}
+
+		h4 {
+			margin-top: 30px;
+			font-family: $montserratExtraBold;
+			font-size: 18px;
+			line-height: 1.2;
+		}
+
+		p {
+			margin-top: 7px;
+			line-height: 1.2;
+		}
+	}
+}
+
+.bid {
+	margin-top: 100px;
+	background-image: url(../img/Group_9.png);
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
