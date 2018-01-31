@@ -1,11 +1,13 @@
 // open subject list
-var id = document.getElementById('header_select');
-
-function openList(subject, subjectList) {
+var idHeader = document.getElementById('header_select');
+var idDelivery = document.getElementById('delivery_select');
+function openList(subject, subjectList, filterWrap) {
     var list = subject.querySelector('.' + subjectList);
+    var wrap = subject.querySelector('.' + filterWrap);
 
     subject.querySelector('img').classList.toggle('rotate180');
     list.classList.toggle('open_list');
+    wrap.classList.toggle('filter__select_opened');
 
     if (list.style.maxHeight) {
         list.style.maxHeight = null;
@@ -28,11 +30,15 @@ function replaceSubject(subject, subjectList, activeSubject) {
     }
 }
 
-id.addEventListener('click', function() {
-    openList(id, 'filter__select_list');
+idHeader.addEventListener('click', function() {
+    openList(idHeader, 'filter__select_list', 'filter__select');
+});
+idDelivery.addEventListener('click', function() {
+    openList(idDelivery, 'filter__select_list', 'filter__select');
 });
 
-replaceSubject(id, 'filter__select_list', 'filter__select_active');
+replaceSubject(idHeader, 'filter__select_list', 'filter__select_active');
+replaceSubject(idDelivery, 'filter__select_list', 'filter__select_active');
 
 $(document).ready(function () {
     $('.catalogue__slider').slick({
