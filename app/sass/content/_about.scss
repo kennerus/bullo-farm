@@ -1,0 +1,173 @@
+.page__title {
+	margin-top: 63px;
+}
+
+.about {
+	margin-top: 20px;
+
+	.purple {
+		color: #82357E;
+	}
+}
+
+.about__group {
+	padding-top: 30px;
+	padding-bottom: 50px;
+	padding-left: 30px;
+	background-color: white;
+	border-left: 7px solid #92278F;
+
+	.group__title {
+		font-family: $montserrat;
+		font-size: 24px;
+	}
+}
+
+.about__groups {
+	display: flex;
+	align-items: center;
+	margin-top: 35px;
+
+	.groups__text {
+		max-width: 230px;
+		margin-right: 50px;
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+	.about__bull {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 220px;
+		height: 150px;
+		margin-right: 40px;
+		padding-right: 30px;
+		border-right: 1px solid #E5E5E5;
+
+		&:last-child {
+			border-right: none;
+		}
+
+		.group__desc {
+			height: 60px;
+			line-height: 1.25;
+		}
+	}
+}
+
+.about__us {
+	p {
+		font-size: 18px;
+	}
+
+	.retailer__title {
+		margin-right: 30px;
+
+		p {
+			font-family: $montserratBlack;
+			font-size: 72px;
+			line-height: 1;
+			color: #788089;
+			opacity: 0.3;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.about__position {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 120px;
+
+	.about__position_img {
+		max-width: 520px;
+		width: 100%;
+		margin-right: 115px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.position__desc {
+		margin-top: 50px;
+
+		font-size: 18px;
+
+		p {
+			margin-top: 30px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.about__retailer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.retailer__desc {
+		max-width: 330px;
+		width: 100%;
+		padding-bottom: 25px;
+
+		p {
+			margin-top: 30px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.retailer__farms {
+	position: relative;
+	right: -20px;
+	width: 442px;
+	height: 282px;
+
+	img {
+		width: 100%;
+	}
+
+	.retailer__farms_text {
+		position: absolute;
+		top: 40%;
+		left: 60px;
+		max-width: 320px;
+		width: 100%;
+		font-family: $montserrat;
+		color: white;
+		transform: translateY(-50%);
+
+		span {
+			font-family: $montserratLight;
+			font-size: 48px;
+		}
+	}
+}
+
+.about__delivery {
+	position: relative;
+	top: -25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 45px;
+	background-color: white;
+	border-radius: 2px;
+	box-shadow: 0 15px 33px 0 rgba(153,130,161,0.18);
+
+	p {
+		max-width: 800px;
+		width: 100%;
+		font-size: 18px;
+		line-height: 1.33;
+	}
+}

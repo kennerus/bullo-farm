@@ -177,3 +177,16 @@
 .container_gray {
     background-color: #F4F4F4;
 }
+
+.page-wrap {
+    background-image: url(../img/header-bg.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.page-wrap_about {
+    background: url(../img/about.png) no-repeat,
+                url(../img/header-bg.png) no-repeat;
+    background-position: 50% 21%,50% 0;
+    background-size: 100%, 100%;
+}
