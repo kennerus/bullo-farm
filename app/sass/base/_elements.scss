@@ -77,8 +77,11 @@
     background-color: #F4F4F4;
 }
 
+.news_white {
+    background-color: white;
+}
+
 .news__title {
-    padding-left: 30px;
     font-size: 48px;
 }
 
@@ -94,6 +97,7 @@
 .news__header {
     display: flex;
     justify-content: space-between;
+    padding-left: 30px;
 
     a {
         font-family: $montserrat;
@@ -117,6 +121,12 @@
         padding-right: 15px;
         padding-bottom: 40px;
         padding-left: 30px;
+        background-color: #F4F4F4;
+        border-right: 1px solid white;
+
+        &:last-of-type {
+            border-right: none;
+        }
 
         &:hover {
             background-color: white;
@@ -159,4 +169,8 @@
 
 .news__blocks_wrap {
     flex-wrap: wrap;
+}
+
+.container_gray {
+    background-color: #F4F4F4;
 }
