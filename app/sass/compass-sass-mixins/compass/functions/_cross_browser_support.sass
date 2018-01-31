@@ -8,7 +8,7 @@
   $prefixed: false
   @each $item in $properties
     @if type-of($item) == "string"
-      $prefixed: $prefixed or str-index($item, "url") != 1 and str-index($item, "rgb") != 1 and str-index($item, "#") != 1
+      $prefixed: $prefixed or str($item, "url") != 1 and str($item, "rgb") != 1 and str($item, "#") != 1
     @else if type-of($item) == "color"
     @else if $item != null
       $prefixed: true

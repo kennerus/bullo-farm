@@ -1,5 +1,5 @@
-.header {
-	background-image: url(../img/header-index-bg.png);
+.header_index {
+	background-image: url(../img/header-bg.png);
 	background-position-x: center;
 	background-repeat: no-repeat;
 }
@@ -9,7 +9,7 @@
 	margin-top: 35px;
 	display: flex;
 	justify-content: space-between;
-	z-index: 2;
+	z: 2;
 
 	h2 {
 		max-width: 463px;
