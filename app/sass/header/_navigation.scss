@@ -18,6 +18,10 @@
 		font-size: 18px;
 		@include hoverOpacity;
 
+		&:hover {
+			border-bottom: 1px solid #788089;
+		}
+
 		&:first-child {
 			margin-right: 55px;
 		}

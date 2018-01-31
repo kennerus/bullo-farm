@@ -1,4 +1,7 @@
-
+.active_menu {
+    border-bottom: 1px solid #788089;
+    opacity: 0.7;
+}
 .filter__select_wrap {
     position: relative;
     width: 320px;
@@ -81,7 +84,7 @@
     background-color: white;
 }
 
-.news__title {
+.page__title {
     font-size: 48px;
 }
 
