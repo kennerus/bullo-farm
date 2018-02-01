@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="686px" height="686px" viewBox="0 0 686 686" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>romb_purple</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.108695652">
-        <g id="assets" transform="translate(-524.000000, -3452.000000)" fill="#92278F">
-            <g id="Group-9" transform="translate(524.000000, 3452.000000)">
-                <rect id="Rectangle-12" transform="translate(343.928206, 343.928206) rotate(-45.000000) translate(-343.928206, -343.928206) " x="224.928206" y="224.928206" width="238" height="238"></rect>
-                <rect id="Rectangle-12" transform="translate(343.282499, 343.282499) rotate(-45.000000) translate(-343.282499, -343.282499) " x="187.96953" y="187.96953" width="310.625938" height="310.625938"></rect>
-                <rect id="Rectangle-12-Copy" transform="translate(343.959645, 343.959645) rotate(-45.000000) translate(-343.959645, -343.959645) " x="147.155668" y="147.155668" width="393.607954" height="393.607954"></rect>
-                <rect id="Rectangle-12-Copy-2" transform="translate(343.298218, 343.298218) rotate(-45.000000) translate(-343.298218, -343.298218) " x="101" y="101" width="484.596437" height="484.596437"></rect>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 699 699" style="enable-background:new 0 0 699 699;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.11;fill:#92278F;}
+	.st1{opacity:0.1087;fill:#92278F;}
+	.st2{opacity:0.11;fill-rule:evenodd;clip-rule:evenodd;fill:#92278F;}
+</style>
+<rect x="102" y="102" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -144.6843 349.2983)" class="st0" width="494.6" height="494.6"/>
+<rect x="148.2" y="148.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -144.9583 349.9598)" class="st1" width="403.6" height="403.6"/>
+<rect x="194" y="194" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -144.6778 349.2826)" class="st2" width="310.6" height="310.6"/>
+<rect x="230.9" y="230.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -144.9453 349.9283)" class="st2" width="238" height="238"/>
 </svg>

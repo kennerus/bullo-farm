@@ -6,6 +6,14 @@
 	@include breakpoint(max-width 1200px) {
 		background-position-x: 42%;
 	}
+
+	@include breakpoint(max-width 1023px) {
+		background-position-x: 48%;
+	}
+
+	@include breakpoint(max-width 767px) {
+		background: none;
+	}
 }
 
 .mine__desc {
@@ -22,12 +30,25 @@
 		font-size: 48px;
 		font-weight: normal;
 		line-height: 56px;
+
+		@include breakpoint(max-width 1023px) {
+			max-width: 300px;
+			width: 100%;
+			font-size: 36px;
+			line-height: 1;
+		}
 	}
 
 	@include breakpoint(max-width 1200px) {
 		.mine__farm {
 			position: absolute;
 			right: -100px;
+		}
+	}
+
+	@include breakpoint(max-width 767px) {
+		.mine__farm {
+			display: none;
 		}
 	}
 }
@@ -44,6 +65,12 @@
 	border-radius: 2px;
 	box-shadow: 0 15px 33px 0 rgba(153,130,161,0.18);
 
+	@include breakpoint(max-width 1024px) {
+		padding-right: 15px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+	}
+
 	h3 {
 		font-size: 24px;
 
@@ -53,15 +80,28 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-top: 27px;
+
+		@include breakpoint(max-width 1024px) {
+			flex-wrap: wrap;
+			margin-top: 22px;
+		}
 
 		.filter__buttons {
 			display: flex;
 			justify-content: flex-start;
+			
+			@include breakpoint(max-width 1200px) {
+				width: 370px;
+			}
+
+			@include breakpoint(max-width 1023px) {
+				width: 100%;
+			}
 		}
 
 		.filter__button {
-			padding: 10px 30px;
-			font-weight: 15px;
+			padding: 10px 25px;
 			background-color: white;
 			border: 1px solid #EBECF0;
 			cursor: pointer;
@@ -100,6 +140,12 @@
 			padding-bottom: 34px;
 			padding-left: 29px;
 
+			@include breakpoint(max-width 1023px) {
+				margin-top: 15px;
+				padding-right: 10px;
+				padding-left: 15px;
+			}
+
 			&:first-of-type {
 				background-color: #580056;
 			}
@@ -133,6 +179,11 @@
 .header__pros {
 	display: flex;
 	justify-content: space-between;
+
+	@include breakpoint(max-width 1023px) {
+		flex-wrap: wrap;
+		max-width: 100%;
+	}
 }
 
 .pension {
@@ -150,6 +201,10 @@
 		max-width: 465px;
 		padding-right: 0;
 		padding-left: 24px;
+	}
+
+	@include breakpoint(max-width 1023px) {
+		max-width: 100%;
 	}
 
 	.pension__desc {
@@ -197,6 +252,10 @@
 			}
 		}
 	}
+
+	.pension__img {
+		align-self: flex-end;
+	}
 }
 
 .tarifs,
@@ -216,6 +275,12 @@
 		padding-left: 15px;
 	}
 
+	@include breakpoint(max-width 1023px) {
+		width: 49%;
+		margin-top: 15px;
+		padding-left: 30px;
+	}
+
 	h4 {
 		width: 100%;
 		font-family: $montserrat;
@@ -225,7 +290,6 @@
 
 	p {
 		width: 100%;
-		font-size: 15px;
 		line-height: 1.25;
 	}
 
@@ -234,6 +298,10 @@
 
 		@include breakpoint(max-width 1200px) {
 			margin-left: 30px;
+		}
+
+		@include breakpoint(max-width 1023px) {
+			margin-left: 0;
 		}
 	}
 }
@@ -255,6 +323,13 @@
 
 		img {
 			margin: 0 auto;
+		}
+	}
+
+	@include breakpoint(max-width 1023px) {
+		img {
+			margin-right: auto;
+			margin-left: 0;
 		}
 	}
 

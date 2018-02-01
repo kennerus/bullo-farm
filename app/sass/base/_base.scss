@@ -16,6 +16,7 @@ $opensans: 'OpenSansRegular', sans-serif;
 html{
     width: 100%;
 }
+
 body{
     width: 100%;
     margin: 0;
@@ -28,6 +29,7 @@ body{
     color: #37383E;
     text-align: left;
     vertical-align: baseline;
+    overflow-x: hidden;
 }
 
 * {

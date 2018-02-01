@@ -44,6 +44,16 @@ $(document).ready(function () {
     $('.catalogue__slider').slick({
         slidesToShow: 3,
         slidesToScroll: 3,
-        appendArrows: $('.catalogue-index__nav')
+        appendArrows: $('.catalogue-index__nav'),
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                centerMode: true,
+                slidesToShow: 1,
+                variableWidth: true
+              }
+            }
+        ]
     })
 });

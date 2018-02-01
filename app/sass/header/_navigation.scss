@@ -1,11 +1,48 @@
 .header__nav {
-	display: flex;
-	justify-content: space-between;
-	padding-top: 25px;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 25px;
 
-	.menu,
-	.phone {
+		@include breakpoint(max-width 767px) {
+			padding: 10px;
+			background-color: #F4F4F4;
+			border-bottom: 1px solid #E5E5E5;
+		}
+	}
+
+	.header__menu {
+		display: flex;
+		justify-content: space-between;
+		width: 60%;
 		margin-top: 6px;
+
+		@include breakpoint(max-width 1200px) {
+			width: 50%;
+		}
+
+		@include breakpoint(max-width 1023px) {
+			width: auto;
+		}
+
+		@include breakpoint(max-width 767px) {
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: flex-end;
+			margin-top: 0;
+		}
+	}
+
+	.menu {
+		margin-top: 4px;
+
+		@include breakpoint(max-width 1023px) {
+			margin-right: 45px;
+		}
+
+		@include breakpoint(max-width 767px) {
+			margin-right: 0;
+		}
 	}
 
 	@include breakpoint(max-width 1200px) {
@@ -14,10 +51,20 @@
 		}
 	}
 
+	@include breakpoint(max-width 1023px) {
+		.logo {
+			margin-right: 120px;
+		}
+	}
+
 	.menu a,
 	.phone span {
 		font-family: $montserratLight;
 		color: white;
+
+		@include breakpoint(max-width 767px) {
+			color: #37383E;
+		}
 	}
 
 	.menu a {
@@ -26,6 +73,12 @@
 
 		&:hover {
 			border-bottom: 1px solid #788089;
+		}
+
+		@include breakpoint(max-width 767px) {
+			font-family: $montserrat;
+			font-size: 16px;
+			color: #92278F;
 		}
 
 		&:first-child {
@@ -39,5 +92,10 @@
 
 	.phone span {
 		font-size: 24px;
+
+		@include breakpoint(max-width 767px) {
+			font-family: $montserrat;
+			font-size: 18px;
+		}
 	}
 }
