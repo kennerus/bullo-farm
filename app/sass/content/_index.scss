@@ -18,6 +18,7 @@
 	}
 
 	.catalogue-index__nav {
+		position: relative;
 		width: 123px;
 		height: 61px;
 	}
@@ -27,11 +28,20 @@
 	position: absolute;
 	top: 22px;
 	left: calc(50% - 40px);
+
+	@include breakpoint(max-width 1200px) {
+		top: -5px;
+	} 
 }
 
 .catalogue__slider {
 	margin: 0 -16px;
-	margin-top: 18px
+	margin-top: 18px;
+
+	@include breakpoint(max-width 1200px) {
+		margin-right: -8px;
+		margin-left: -8px;
+	}
 }
 
 .catalogue__slide {
@@ -40,6 +50,10 @@
 	border: 1px solid #EBECF0;
 	border-radius: 2px;
 	transition: box-shadow 0.2s;
+
+	@include breakpoint(max-width 1200px) {
+		margin: 0 8px;
+	}
 
 	&:hover {
 		box-shadow: 0 7px 15px 0 rgba(102,35,100,0.38);
@@ -224,6 +238,11 @@
 	border: 1px solid #EBECF0;
 	border-radius: 2px;
 
+	@include breakpoint(max-width 1200px) {
+		width: 300px;
+		padding: 20px;
+	}
+
 	&:hover {
 		box-shadow: 0 15px 33px 0 rgba(153,130,161,0.18);
 	}
@@ -313,6 +332,11 @@
 	background-position: right top;
 	background-size: (50%);
 
+	@include breakpoint(max-width 1200px) {
+		background-position: 125% 8%;
+		background-size: 70%;
+	}
+
 	h2 {
 		position: relative;
 		font-family: $montserratBlack;
@@ -380,6 +404,13 @@
 		padding-left: 23px;
 		background-color: #F4F4F4;
 
+		@include breakpoint(max-width 1200px) {
+			width: 224px;
+			height: 285px;
+			padding-left: 15px;
+			padding-bottom: 10px;
+		}
+
 		img {
 			height: 57px
 		}
@@ -389,6 +420,10 @@
 			font-family: $montserratExtraBold;
 			font-size: 18px;
 			line-height: 1.2;
+
+			@include breakpoint(max-width 1200px) {
+				margin-top: 20px;
+			}
 		}
 
 		p {
@@ -408,6 +443,11 @@
 	background-repeat: no-repeat;
 	background-size: 47%, cover;
 	background-position: 100% -12px, left;
+
+	@include breakpoint(max-width 1200px) {
+		background-size: 80%,cover;
+		background-position: 235% -10px,0;
+	}
 }
 
 .bid__desc {
@@ -444,9 +484,12 @@
 	margin-top: 30px;
 
 	.provider__text {
-		max-width: 350px;
-		width: 100%;
+		width: 350px;
 		margin-right: 30px;
+
+		@include breakpoint(max-width 1200px) {
+			width: 255px;
+		}
 
 		p {
 			margin-top: 15px;
@@ -461,7 +504,8 @@
 		img {
 			width: 122px;
 			height: 176px;
-			margin-right: 28px;
+			margin-right: 27px;
+
 
 			&:last-child {
 				margin-right: 0;
@@ -469,6 +513,11 @@
 
 			&:hover {
 				box-shadow: 0 15px 33px 0 rgba(153,130,161,0.18);
+			}
+
+			@include breakpoint(max-width 1200px) {
+				width: 106px;
+				height: 153px;
 			}
 		}
 	}

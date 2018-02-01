@@ -2,21 +2,33 @@
 	background-image: url(../img/header-index-bg.png);
 	background-position-x: center;
 	background-repeat: no-repeat;
+
+	@include breakpoint(max-width 1200px) {
+		background-position-x: 42%;
+	}
 }
 
 .mine__desc {
 	position: relative;
-	margin-top: 35px;
 	display: flex;
 	justify-content: space-between;
+	height: 296px;
+	margin-top: 35px;
 	z-index: 2;
 
 	h2 {
-		max-width: 463px;
+		width: 463px;
 		margin-top: 25px;
 		font-size: 48px;
 		font-weight: normal;
 		line-height: 56px;
+	}
+
+	@include breakpoint(max-width 1200px) {
+		.mine__farm {
+			position: absolute;
+			right: -100px;
+		}
 	}
 }
 
@@ -53,6 +65,10 @@
 			background-color: white;
 			border: 1px solid #EBECF0;
 			cursor: pointer;
+
+			@include breakpoint(max-width 1200px) {
+				padding: 10px;
+			}
 		}
 
 		.filter__button:first-child {
@@ -125,21 +141,33 @@
 	max-width: 544px;
 	width: 100%;
 	height: 256px;
-	padding-top: 21px;
+	padding-top: 20px;
 	padding-right: 16px;
 	padding-left: 32px;
 	background-color: #92278F;
 
+	@include breakpoint(max-width 1200px) {
+		max-width: 465px;
+		padding-right: 0;
+		padding-left: 24px;
+	}
+
 	.pension__desc {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		margin-top: 14px;
 
 		h4 {
-			font-family: $montserrat;
+			font-family: $montserratLight;
 			font-size: 24px;
 			color: white;
 			line-height: 1;
+
+			@include breakpoint(max-width 1200px) {
+				position: absolute;
+				width: 250px;
+			}
 		}
 
 		p {
@@ -147,6 +175,10 @@
 			font-size: 15px;
 			color: white;
 			line-height: 1.25;
+
+			@include breakpoint(max-width 1200px) {
+				margin-top: 70px;
+			}
 		}
 
 		a {
@@ -159,6 +191,10 @@
 			text-align: center;
 			text-shadow: 0 1px 0 0 rgba(255,255,255,0.5);
 			background-color: white;
+
+			@include breakpoint(max-width 1200px) {
+				margin-top: 20px;
+			}
 		}
 	}
 }
@@ -173,6 +209,12 @@
 	padding-top: 29px;
 	padding-right: 55px;
 	padding-left: 24px;
+
+	@include breakpoint(max-width 1200px) {
+		width: 225px;
+		padding-right: 30px;
+		padding-left: 15px;
+	}
 
 	h4 {
 		width: 100%;
@@ -189,6 +231,10 @@
 
 	img {
 		align-self: flex-end;
+
+		@include breakpoint(max-width 1200px) {
+			margin-left: 30px;
+		}
 	}
 }
 
@@ -203,6 +249,14 @@
 .tablet {
 	padding-right: 25px;
 	background-color: #3B424B;
+
+	@include breakpoint(max-width 1200px) {
+		padding-right: 5px;
+
+		img {
+			margin: 0 auto;
+		}
+	}
 
 	h4, p {
 		color: white;
