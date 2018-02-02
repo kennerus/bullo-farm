@@ -6,7 +6,6 @@
 
 		@include breakpoint(max-width 767px) {
 			padding: 10px;
-			background-color: #F4F4F4;
 			border-bottom: 1px solid #E5E5E5;
 		}
 	}
@@ -54,6 +53,12 @@
 	@include breakpoint(max-width 1023px) {
 		.logo {
 			margin-right: 120px;
+		}
+	}
+
+	@include breakpoint(max-width 767px) {
+		.logo {
+			margin-right: 0;
 		}
 	}
 

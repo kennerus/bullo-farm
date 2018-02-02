@@ -6,12 +6,23 @@
 	background-image: url(../img/catalogue-index.png);
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 0;
+		padding: 15px 0;
+		background: linear-gradient(270deg, #92278F 0%, #580056 100%);
+	}
+
 }
 
 .catalogue-index__head {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+
+	@include breakpoint(max-width 767px) {
+		align-items: center;
+	}
 
 	h2 {
 		color: white;
@@ -21,6 +32,11 @@
 		position: relative;
 		width: 123px;
 		height: 61px;
+
+		@include breakpoint(max-width 767px) {
+			width: 84px;
+			height: 40px;
+		}
 	}
 }
 
@@ -32,6 +48,10 @@
 	@include breakpoint(max-width 1200px) {
 		top: -5px;
 	} 
+
+	@include breakpoint(max-width 767px) {
+		display: none;
+	}
 }
 
 .catalogue__slider {
@@ -41,6 +61,10 @@
 	@include breakpoint(max-width 1200px) {
 		margin-right: -8px;
 		margin-left: -8px;
+	}
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 10px;
 	}
 }
 
@@ -79,6 +103,16 @@
 		justify-content: center;
 		width: 260px;
 		height: 176px;
+
+		@include breakpoint(max-width 767px) {
+			width: 220px;
+			height: 149px;
+
+			img {
+				width: auto;
+				height: 100%;
+			}
+		}
 	}
 
 	.cripto-icons {
@@ -112,6 +146,10 @@
 		color: #37383E;
 	}
 
+	.farm-title {
+		font-size: 18px;
+	}
+
 	.purple-text {
 		color: #92278F;
 	}
@@ -130,18 +168,22 @@
 		justify-content: space-between;
 	}
 
+	.income__month,
+	.income__year {
+		margin: 0;
+		padding: 10px 22px;
+	}
+
 	.income__month {
 		background-color: #E8EAEC;
 	}
 
 	.income__year {
 		background-color: #F4F4F4;
-	}
 
-	.income__month,
-	.income__year {
-		margin: 0;
-		padding: 10px 22px;
+		@include breakpoint(max-width 767px) {
+			padding-left: 15px;
+		}
 	}
 
 	.farm-rent {
@@ -201,21 +243,36 @@
 .catalogue-index__all {
 	margin-top: 50px;
 
+	@include breakpoint(max-width 767px) {
+		margin-top: 15px;
+	}
+
 	.all-farms {
+		display: block;
 		width: 270px;
 		padding: 15px 0;
 		font-family: $montserratLight;
 		font-size: 22px;
 		color: white;
+		text-align: center;
 		border: 0;
 		border-radius: 2px;
 		background-color: #92278F;
+		box-shadow: 0 4px 10px 0 rgba(94,31,92,0.5);
 		cursor: pointer;
+
+		@include breakpoint(max-width 767px) {
+			margin: 0 auto
+		}
 	}
 }
 
 .cloud {
 	margin-top: 30px;
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 25px;
+	}
 
 	.cloud__title {
 		text-align: center;
@@ -231,6 +288,13 @@
 		width: 100%;
 		height: 370px;
 		overflow-x: auto;
+	}
+
+	@include breakpoint(max-width 767px) {
+		justify-content: space-around;
+		flex-wrap: wrap;
+		height: auto;
+		margin-top: 15px;
 	}
 }
 
@@ -254,6 +318,17 @@
 		margin-right: 10px;
 	}
 
+	@include breakpoint(max-width 767px) {
+		width: 100%;
+		margin-top: 10px;
+		margin-right: 0;
+		padding: 15px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
 	&:hover {
 		box-shadow: 0 15px 33px 0 rgba(153,130,161,0.18);
 	}
@@ -264,7 +339,7 @@
 		align-items: center;
 
 		.cloud__block_title {
-			font-size: 24px
+			font-size: 24px;
 		}
 	}
 
@@ -351,36 +426,67 @@
 	@include breakpoint(max-width 1023px) {
 		background-image: url(../img/build.png);
 		background-position: 50vw 8%;
-		background-size: 100%;
 	}
 
-	h2 {
-		position: relative;
+	@include breakpoint(max-width 767px) {
+		background-image: none;
+	}
+
+
+	.techpark__desc-title {
 		font-family: $montserratBlack;
 		font-size: 72px;
 		color: #E8EAEC;
 		text-transform: uppercase;
 
-		span {
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
-			left: 2px;
-			text-transform: none;
-			font-size: 36px;
-			color: #37383E;
+		@include breakpoint(max-width 767px) {
+			display: none;
+		}
+	}
+
+	h3 {
+		position: absolute;
+		top: 220px;
+		transform: translateY(-50%);
+		left: 50px;
+		font-family: $montserratBlack;
+		font-size: 36px;
+		color: #37383E;
+
+		@include breakpoint(max-width 1023px) {
+			left: 30px;
+		}
+
+		@include breakpoint(max-width 767px) {
+			position: static;
+			transform: translateY(0);
+			font-family: $montserrat;
+			font-size: 20px;
+			color: white;
 		}
 	}
 }
 
 .techpark__desc {
 	padding-top: 90px;
+
+	@include breakpoint(max-width 767px) {
+		padding: 20px 0;
+		background-image: url(../img/house-cut.jpg);
+		background-size: cover;
+		background-position: center;
+		color: white;
+	}
 	
 	p {
 		max-width: 350px;
 		width: 100%;
 		margin-top: 30px;
 		line-height: 1.25;
+
+		@include breakpoint(max-width 767px) {
+			margin-top: 15px;
+		}
 	}
 
 	a {
@@ -393,6 +499,11 @@
 		text-align: center;
 		border: 1px solid #92278F;
 		border-radius: 2px;
+		background-color: white;
+
+		@include breakpoint(max-width 767px) {
+			margin-top: 15px;
+		}
 	}
 }
 
@@ -401,10 +512,18 @@
 	margin-top: 125px;
 	background-color: white;
 
-	h2 {
+	@include breakpoint(max-width 767px) {
+		margin-top: 20px;
+	}
+
+	.techpark__features-title {
 		position: absolute;
 		top: -58px;
 		z-index: 0;
+
+		@include breakpoint(max-width 767px) {
+			position: static;
+		}
 	}
 }
 
@@ -415,6 +534,11 @@
 
 	@include breakpoint(max-width 1024px) {
 		flex-wrap: wrap;
+	}
+
+	@include breakpoint(max-width 767px) {
+		display: block;
+		margin-top: 10px;
 	}
 
 	.features__block {
@@ -440,6 +564,16 @@
 			}
 		}
 
+		@include breakpoint(max-width 767px) {
+			width: 90vw;
+			height: 216px;
+			margin-right: 10px;
+
+			&:nth-child(n + 3) {
+				margin-top: 0;
+			}
+		}
+
 		img {
 			height: 57px
 		}
@@ -453,11 +587,20 @@
 			@include breakpoint(max-width 1200px) {
 				margin-top: 20px;
 			}
+
+			@include breakpoint(max-width 767px) {
+				font-family: $montserrat;
+				font-size: 16px;
+			}
 		}
 
 		p {
 			margin-top: 7px;
 			line-height: 1.2;
+
+			@include breakpoint(max-width 767px) {
+				margin-top: 2px;
+			}
 		}
 	}
 }
@@ -480,6 +623,15 @@
 		background: url(../img/768.png) no-repeat;
 		background-size: cover;
 		background-position: right center;
+	}
+
+	@include breakpoint(max-width 767px) {
+		min-height: inherit;
+		padding: 30px 0;
+		background: url(../img/romb_purple.png) no-repeat, 
+		linear-gradient(55.43deg, #92278F 0%, #580056 100%);
+		background-size: 200%,contain;
+		background-position: -4% 140px,center;
 	}
 }
 
@@ -505,11 +657,20 @@
 		border-radius: 2px;
 		background-color: #92278F;
 		box-shadow: 0 4px 10px 0 rgba(94,31,92,0.5);
+
+		@include breakpoint(max-width 767px) {
+			margin-right: auto;
+			margin-left: auto;
+		}
 	}
 }
 
 .provider {
 	margin-top: 60px;
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 30px;
+	}
 }
 
 .provider__desc {
@@ -518,6 +679,10 @@
 
 	@include breakpoint(max-width 1023px) {
 		flex-direction: column;
+	}
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 10px;
 	}
 
 	.provider__text {
@@ -542,12 +707,23 @@
 			@include breakpoint(max-width 1200px) {
 				margin-top: 10px;
 			}
+
+			@include breakpoint(max-width 767px) {
+				margin-top: 5px;
+			}
 		}
 	}
 
 	.provider__serts {
 		@include breakpoint(max-width 1023px) {
 			margin-top: 40px;	
+		}
+
+		@include breakpoint(max-width 767px) {
+			display: flex;
+			margin-top: 20px;
+			padding-bottom: 10px;
+			overflow-x: auto;
 		}
 
 		img {
@@ -572,6 +748,7 @@
 				width: 119px;
 				height: 172px;
 			}
+
 		}
 	}
 }
@@ -592,13 +769,40 @@
 	@include breakpoint(max-width 1023px) {
 		display: none;
 	}
+
+	@include breakpoint(max-width 767px) {
+		display: block;
+		height: 560px;
+		margin-top: 50px;
+		padding-top: 30px;
+		background-image: url(../img/warranty-mob.png);
+		background-size: cover;
+	}
 }
 
 .warranty__blocks {
 	display: flex;
+
+	@include breakpoint(max-width 767px) {
+		flex-wrap: wrap;
+	}
 }
 
 .warranty__block {
+
+	@include breakpoint(max-width 767px) {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-top: 15px;
+		padding-top: 10px;
+		border-top: 1px solid #788089;
+
+		&:first-child {
+			border-top: none;
+		}
+	}
+
 	.warranty__number {
 		display: flex;
 		align-items: center;
@@ -606,6 +810,14 @@
 
 		@include breakpoint(max-width 1200px) {
 			margin-right: 25px;
+		}
+
+		@include breakpoint(max-width 767px) {
+			min-width: 25px;
+
+			.warranty__arrow {
+				display: none;
+			}
 		}
 
 		span {
@@ -616,12 +828,23 @@
 			@include breakpoint(max-width 1200px) {
 				margin-right: 35px;
 			}
+
+			@include breakpoint(max-width 767px) {
+				margin-right: 0;
+				font-size: 24px;
+			}
 		}
 	}
 
 	.warranty__text {
 		p {
 			line-height: 1.25;
+		}
+
+		@include breakpoint(max-width 767px) {
+			br {
+				display: none;
+			}
 		}
 	}
 }
@@ -641,6 +864,10 @@
 		padding-right: 30px;
 		padding-left: 30px;
 	}
+
+	@include breakpoint(max-width 767px) {
+		padding: 20px 15px;
+	}
 }
 
 .delivery__blocks {
@@ -650,6 +877,10 @@
 
 	@include breakpoint(max-width 1023px) {
 		justify-content: space-around;
+	}
+
+	@include breakpoint(max-width 767px) {
+		justify-content: flex-start;
 	}
 
 	p:first-of-type {
@@ -664,6 +895,15 @@
 			margin-right: 15px;
 		}
 
+		@include breakpoint(max-width 767px) {
+			margin-top: 20px;
+			margin-right: 0;
+
+			.filter__recount_delivery {
+				display: block;
+			}
+		}
+
 		&:last-of-type {
 			margin-right: 0;
 		}
@@ -673,10 +913,19 @@
 .delivery__choise {
 	display: flex;
 
+	@include breakpoint(max-width 767px) {
+		width: 270px;
+	}
+
 	label {
 		padding: 10px 30px;
 		border: 1px solid #EBECF0;
 		cursor: pointer;
+
+		@include breakpoint(max-width 767px) {
+			width: 50%;
+			padding: 10px 18px;
+		}
 
 		&:first-of-type {
 			border-right: none;
@@ -708,29 +957,51 @@
 	display: flex;
 	align-items: flex-end;
 
+	@include breakpoint(max-width 767px) {
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	.filter__recount {
 		margin-right: 50px;
+
+		@include breakpoint(max-width 767px) {
+			margin-right: 0;
+		}
 	}
 
 	.final__cost {
 		font-size: 36px;
 		border-bottom: 2px solid #92278F;
+
+		@include breakpoint(max-width 767px) {
+			font-size: 24px;
+		}
 	}
 }
 
 #delivery_select {
 	margin-right: 15px;
+
+	@include breakpoint(max-width 767px) {
+		margin-right: 0;
+	}
 }
 
 .footer__contacts {
-	display: flex;
-	justify-content: space-between;
+	
 	padding-top: 76px;
 	padding-bottom: 110px;
 	background-image: url(../img/cntc_back.png);
 	background-repeat: no-repeat;
 	background-size: 72% 100%;
 	background-position: right;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
 
 	@include breakpoint(max-width 1200px) {
 		background-size: 80% 100%;
@@ -742,19 +1013,28 @@
 		padding-bottom: 0;
 		background-image: none;
 	}
+
+	@include breakpoint(max-width 767px) {
+		padding-top: 20px;
+	}
 }
 
 .contacts {
 	@include breakpoint(max-width 1023px) {
-		.container {
-			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
-		}
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
 
-		h2 {
-			width: 100%;
-		}
+.contacts__title {
+	@include breakpoint(max-width 1023px) {
+		width: 100%;
+	}
+
+	@include breakpoint(max-width 767px) {
+		font-family: $montserrat;
+		font-size: 20px;
 	}
 }
 
@@ -763,6 +1043,15 @@
 
 	@include breakpoint(max-width 1023px) {
 		margin-top: 23px;
+	}
+
+	@include breakpoint(max-width 767px) {
+		display: flex;
+		align-items: center;
+
+		img {
+			margin-right: 20px;
+		}
 	}
 
 	.contacts__block_phone,
@@ -785,17 +1074,21 @@
 
 
 .address {
-	.container {
-		display: flex;
-		justify-content: space-between;
-		padding-top: 60px;
-		color: white;
-	}
+	display: flex;
+	justify-content: space-between;
+	padding-top: 60px;
+	color: white;
 
 	@include breakpoint(max-width 1023px) {
 		margin-top: 30px;
 		padding-bottom: 30px;
 		background-color: #3B424B;
+	}
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 25px;
+		padding-top: 25px;
+		padding-bottom: 0;
 	}
 
 	.address__city {

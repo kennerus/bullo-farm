@@ -10,7 +10,7 @@
         			<div class="catalogue__slide">
         				<header class="catalogue__slide_header">
         					<div class="slide__img">
-                                <img src="img/farm-01.png" width="185" height="182" alt="">               
+                                <img src="img/farm-01.png" width="185" height="182" alt="">
                             </div>
 
         					<div class="cripto-icons">
@@ -19,6 +19,7 @@
         						<img src="img/icons/lightcoin.svg" width="24" height="24" alt="">
         					</div>
         				</header>
+
         				<div class="catalogue__slide_desc">
         					<h4 class="farm-title">Ebit Miner E9 Plus - 9 TH/s</h4>
 
@@ -189,7 +190,7 @@
         			</div>
         		</div>
         		<div class="catalogue-index__all">
-        			<button class="all-farms">Все фермы (34)</button>
+        			<a href="catalogue.html" class="all-farms">Все фермы (34)</a>
         		</div>
             </div>
     	</section>
@@ -316,15 +317,18 @@
     	</section>
 
     	<section class="techpark">
-    		<div class="container">
-              <div class="techpark__desc">
-                    <h2>5000 м<sup>2</sup> <br> цифрового <br> удовольствия <span>Технопарк</span></h2>
+            <div class="techpark__desc">
+    		    <div class="container">
+                    <h2 class="techpark__desc-title">5000 м<sup>2</sup> <br> цифрового <br> удовольствия</h2>
+                    <h3>Технопарк</h3>
                     <p >BulloFarm входит в Резиденты индустриального технопарка «Усолье-Промтех» и пользуется льготами, предусмотренными как «Законом Иркутской области об индустриальных (промышленных) парках, технопарках в Иркутской области», так и Федеральным законом «О территориях опережающего социально-экономического развития в Российской Федерации».</p>
                     <a  href="#">Подробнее</a>
                 </div>
+            </div>
 
-                <div class="techpark__features">
-                    <h2>Особенности</h2>
+            <div class="techpark__features">
+                <div class="container">
+                    <h2 class="techpark__features-title">Особенности</h2>
 
                     <div class="features__blocks">
                         <div class="features__block">
@@ -351,15 +355,15 @@
                             <p >Технопарк входит в зону льготной электроэнергии, что делает майнинг ещё прибыльнее.</p>
                         </div>
                     </div>
-                </div>      
+                </div> 
             </div>
     	</section>
 
     	<section class="bid">
     		<div class="container">
                 <div class="bid__desc">
-                    <h2>Совместная покупка</h2>
-                    <p >Вы оставляете заявку на определенную сумму и ожидаете подтверждения на дополнительного обладателя оборудования. После этого с вами заключается договор на покупку оборудования и на дальнейшую его установку в Усолье Промтех. </p>
+                    <h2 class="bid__title">Совместная покупка</h2>
+                    <p>Вы оставляете заявку на определенную сумму и ожидаете подтверждения на дополнительного обладателя оборудования. После этого с вами заключается договор на покупку оборудования и на дальнейшую его установку в Усолье Промтех. </p>
                     <a href="#">Оставить заявку</a>
                 </div>
             </div>
@@ -388,7 +392,7 @@
                 <div class="warranty__blocks">
                     <div class="warranty__block">
                         <div class="warranty__number">
-                            <span>1</span><img src="img/arrow.jpg" alt="">
+                            <span>1</span><img class="warranty__arrow" src="img/arrow.jpg" alt="">
                         </div>
 
                         <div class="warranty__text">
@@ -398,7 +402,7 @@
 
                     <div class="warranty__block">
                         <div class="warranty__number">
-                            <span>2</span><img src="img/arrow.jpg" alt="">
+                            <span>2</span><img class="warranty__arrow" src="img/arrow.jpg" alt="">
                         </div>
 
                         <div class="warranty__text">
@@ -408,7 +412,7 @@
 
                     <div class="warranty__block">
                         <div class="warranty__number">
-                            <span>3</span><img src="img/arrow.jpg" alt="">
+                            <span>3</span><img class="warranty__arrow" src="img/arrow.jpg" alt="">
                         </div>
 
                         <div class="warranty__text">
@@ -433,6 +437,7 @@
     		<div class="container">
                 <div class="delivery__wrap">
                     <h2>Доставка</h2>
+
                     <div class="delivery__blocks">
                         <div class="delivery__block">
                             <p class="fs13">Куда доставить</p>
@@ -476,7 +481,7 @@
                         </div>
 
                         <div class="delivery__block delivery__count">
-                            <button class=" filter__recount">Пересчитать</button>
+                            <button class="filter__recount filter__recount_delivery">Пересчитать</button>
                             <span class="final__cost">5 531 Р</span>
                         </div>
                     </div> 
@@ -491,7 +496,7 @@
                     <a href="news.html">Все новости</a>
                 </header>
 
-                <div class="news__blocks">
+                <div class="news__blocks news__blocks_slick">
                     <acticle class="news__block">
                         <div class="article__content">
                             <a class="featured_img" href="single-news.html">

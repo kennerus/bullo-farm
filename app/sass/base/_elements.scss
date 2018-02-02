@@ -9,6 +9,11 @@
     @include breakpoint(max-width 1023px) {
         margin-top: 40px
     }
+
+    @include breakpoint(max-width 767px) {
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }
 .filter__select_wrap {
     position: relative;
@@ -17,6 +22,10 @@
 
     @include breakpoint(max-width 1023px) {
         width: 230px;
+    }
+    @include breakpoint(max-width 767px) {
+        width: 100%;
+        margin-right: 0;
     }
     .filter__select_title {
         position: absolute;
@@ -37,6 +46,10 @@
         @include breakpoint(max-width 1023px) {
             width: 230px;
         }
+
+        @include breakpoint(max-width 767px) {
+            width: 100%;
+        }
         .filter__select_active {
             color: #4A4A4A;
             
@@ -46,6 +59,10 @@
                 white-space: nowrap;
                 text-overflow: hidden;
                 overflow-x: hidden;
+            }
+
+            @include breakpoint(max-width 767px) {
+                width: 145px;
             }
         }
         img {
@@ -109,18 +126,33 @@
     border: 1px solid #92278F;
     border-radius: 2px;
     cursor: pointer;
+
+    @include breakpoint(max-width 767px) {
+        display: none;
+    }
 }
 
 .news {
     padding-top: 145px;
     padding-bottom: 70px;
     background-color: #F4F4F4;
+
+    @include breakpoint(max-width 767px) {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
 }
 
 .news_index {
     @include breakpoint(max-width 1023px) {
         .news__block:last-child {
             display: none;
+        }
+    }
+
+    @include breakpoint(max-width 767px) {
+        .news__block:last-child {
+            display: block;
         }
     }
 }
@@ -147,10 +179,18 @@
     justify-content: space-between;
     padding-left: 30px;
 
+    @include breakpoint(max-width 767px) {
+        padding-left: 0;
+    }
+
     a {
         font-family: $montserrat;
         font-size: 20px;
         color: #37383E;
+
+        @include breakpoint(max-width 767px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -225,6 +265,17 @@
 
         time {
             margin-top: 15px;
+        }
+    }
+}
+
+.news__blocks_slick {
+    @include breakpoint(max-width 767px) {
+        display: block;
+        width: auto;
+
+        .news__block {
+            width: 90vw;
         }
     }
 }

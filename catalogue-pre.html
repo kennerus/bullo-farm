@@ -20,11 +20,14 @@
 
 <!-- start header_catalogue.html-->
 <header class="header">
-	<div class="container">
-		<nav class="header__nav">
+	<nav class="header__nav">
+		<div class="container">
 			<div class="logo">
 				<a href="index.html">
-					<img src="img/logo.svg" alt="Bullo Farm">
+					<picture>
+						<source srcset="img/logo-small.svg" media="(max-width: 767px)">
+						<img src="img/logo.svg" alt="Bullo Farm">
+					</picture>
 				</a>
 			</div>
 
@@ -38,8 +41,8 @@
 					<span>8 (800) 123 45 67</span>
 				</div>
 			</div>
-		</nav>
-	</div>
+		</div>
+	</nav>
 </header>
 <!-- end header_catalogue.html-->
 
@@ -280,32 +283,44 @@
     </section>
 <!-- start contacts.html-->
 <section class="footer__contacts">
-    <div class="contacts">
-        <div class="container">
-            <h2>Контакты</h2>
+    <div class="container">
+        <div class="contacts">
+            <div class="container__footer">
+                <h2 class="contacts__title">Контакты</h2>
 
-            <div class="contacts__block">
-                <img src="img/phone-call.svg" alt="">
-                <p>Единый телефон</p>
-                <p class="contacts__block_phone">8 800 123 45 67</p>
-            </div>
+                <div class="contacts__block">
+                    <img src="img/phone-call.svg" alt="">
 
-            <div class="contacts__block">
-                <img src="img/telegram.svg" alt="">
-                <p>Телеграм канал</p>
-                <a class="contacts__block_telegram" href="#">@bullofarm</a>
-            </div>
+                    <div>
+                        <p>Единый телефон</p>
+                        <p class="contacts__block_phone">8 800 123 45 67</p>
+                    </div>
+                </div>
 
-            <div class="contacts__block">
-                <img src="img/envelope.svg" alt="">
-                <p>E-mail</p>
-                <a class="contacts__block_email" href="mailto:info@bullofarm.ru">info@bullofarm.ru</a>
+                <div class="contacts__block">
+                    <img src="img/telegram.svg" alt="">
+
+                    <div>
+                        <p>Телеграм канал</p>
+                        <a class="contacts__block_telegram" href="#">@bullofarm</a>
+                    </div>
+                </div>
+
+                <div class="contacts__block">
+                    <img src="img/envelope.svg" alt="">
+
+                    <div>
+                        <p>E-mail</p>
+                        <a class="contacts__block_email" href="mailto:info@bullofarm.ru">info@bullofarm.ru</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="address">
-        <div class="container">
+        <div class="address">
+            <div class="container__footer">
+                
+            </div>
             <div class="address__city">
                 <h4 class="address__city_title">Иркутск</h4>
                 <p class="address__city_address">г.Усолье-Сибирское, <br> ул. Дзержинского, 1</p>

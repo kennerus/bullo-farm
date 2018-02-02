@@ -13,6 +13,7 @@
 
 	@include breakpoint(max-width 767px) {
 		background: none;
+		background-color: #F4F4F4;
 	}
 }
 
@@ -24,9 +25,14 @@
 	margin-top: 35px;
 	z-index: 2;
 
-	h2 {
+	@include breakpoint(max-width 767px) {
+		height: auto;
+		margin-top: 20px;
+	}
+
+	.mine__title {
 		width: 463px;
-		margin-top: 25px;
+		padding-top: 25px;
 		font-size: 48px;
 		font-weight: normal;
 		line-height: 56px;
@@ -36,6 +42,14 @@
 			width: 100%;
 			font-size: 36px;
 			line-height: 1;
+		}
+
+		@include breakpoint(max-width 767px) {
+			padding-top: 0;
+			font-family: $montserrat;
+			font-size: 20px;
+			line-height: 1.2;
+			text-align: center;
 		}
 	}
 
@@ -71,9 +85,18 @@
 		padding-left: 15px;
 	}
 
-	h3 {
-		font-size: 24px;
+	@include breakpoint(max-width 767px) {
+		top: 0;
+		margin-top: 35px;
+		padding: 10px;
+	}
 
+	.calculatio__title {
+		font-size: 24px;
+		
+		@include breakpoint(max-width 767px) {
+			font-size: 18px;
+		}
 	}
 
 	.calculator__filter {
@@ -133,6 +156,12 @@
 	.calculator__desc {
 		display: flex;
 
+		@include breakpoint(max-width 767px) {
+			flex-direction: column;
+			justify-content: flex-start;
+			width: 100%;
+		}
+
 		.calculator__desc_block {
 			width: 260px;
 			margin-top: 27px;
@@ -146,8 +175,22 @@
 				padding-left: 15px;
 			}
 
+			@include breakpoint(max-width 767px) {
+				width: 100%;
+				margin-top: 0;
+				padding: 12px 16px;
+
+				br {
+					display: none;
+				}
+			}
+
 			&:first-of-type {
 				background-color: #580056;
+
+				@include breakpoint(max-width 767px) {
+					margin-top: 15px;
+				}
 			}
 
 			&:nth-of-type(2) {
@@ -166,10 +209,20 @@
 				font-size: 13px;
 				color: #E8EAEC;
 
+				@include breakpoint(max-width 767px) {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+
 				span {
 					font-size: 24px;
 					font-family: $montserratLight;
 					color: white;
+
+					@include breakpoint(max-width 767px) {
+						font-size: 18px;
+					}
 				}
 			}
 		}
@@ -177,12 +230,20 @@
 }
 
 .header__pros {
-	display: flex;
-	justify-content: space-between;
+	.container {
+		display: flex;
+		justify-content: space-between;
 
-	@include breakpoint(max-width 1023px) {
-		flex-wrap: wrap;
-		max-width: 100%;
+		@include breakpoint(max-width 1023px) {
+			flex-wrap: wrap;
+			max-width: 100%;
+		}
+
+		@include breakpoint(max-width 767px) {
+			margin-top: 16px;
+			padding: 16px 10px;
+			background-color: white;
+		}
 	}
 }
 
@@ -205,6 +266,10 @@
 
 	@include breakpoint(max-width 1023px) {
 		max-width: 100%;
+	}
+
+	@include breakpoint(max-width 767px) {
+		padding-left: 15px;
 	}
 
 	.pension__desc {
@@ -234,6 +299,10 @@
 			@include breakpoint(max-width 1200px) {
 				margin-top: 70px;
 			}
+
+			@include breakpoint(max-width 767px) {
+				width: 150px;
+			}
 		}
 
 		a {
@@ -250,11 +319,22 @@
 			@include breakpoint(max-width 1200px) {
 				margin-top: 20px;
 			}
+
+			@include breakpoint(max-width 767px) {
+				margin-top: 30px;
+			}
 		}
 	}
 
 	.pension__img {
 		align-self: flex-end;
+
+		@include breakpoint(max-width 767px) {
+			position: absolute;
+			right: 10px;
+			width: 175px;
+			height: 160px;
+		}
 	}
 }
 
@@ -279,6 +359,11 @@
 		width: 49%;
 		margin-top: 15px;
 		padding-left: 30px;
+	}
+
+	@include breakpoint(max-width 767px) {
+		width: 100%;
+		margin-top: 10px;
 	}
 
 	h4 {

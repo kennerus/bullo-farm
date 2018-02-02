@@ -56,4 +56,24 @@ $(document).ready(function () {
             }
         ]
     })
+
+    if($(window).width() < 767) {
+        $('.features__blocks').slick({
+            dots: true,
+            slidesToShow: 1,
+            centerMode: true,
+            appendArrows: false,
+            variableWidth: true,
+            infinite: false
+        })
+
+        $('.news__blocks_slick').slick({
+            dots: true,
+            slidesToShow: 1,
+            centerMode: true,
+            appendArrows: false,
+            variableWidth: true,
+            infinite: true
+        })
+    }
 });

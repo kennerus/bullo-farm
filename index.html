@@ -23,7 +23,10 @@
 			<div class="container">
 				<div class="logo">
 					<a href="index.html">
-						<img src="img/logo.svg" alt="Bullo Farm">
+						<picture>
+							<source srcset="img/logo-small.svg" media="(max-width: 767px)">
+							<img src="img/logo.svg" alt="Bullo Farm">
+						</picture>
 					</a>
 				</div>
 
@@ -41,78 +44,82 @@
 		</nav>
 
 		<div class="header__mine">
-			<div class="mine__desc">
-				<h2>Продажа, аренда и размещение майнинг ферм</h2>
-				<img src="img/farm.png" width="534" height="296" alt="" class="mine__farm">
-			</div>
-			<div class="mine__calculator">
-				<h3>Калькулятор доходности</h3>
-				<div class="calculator__filter">
-					<div class="filter__buttons">
-						<button class="filter__button active_btn">Покупка</button>
-						<button class="filter__button">Аренда</button>
-						<button class="filter__button">Покупка и обслуживание</button>
-					</div>
-
-					<div class="filter__list-button">
-						<div class="filter__select_wrap" id="header_select">
-							<p class="filter__select_title">Ферма</p>
-
-							<div  class="filter__select">
-	                            <span class="filter__select_active">Майнер PANTECH WX6 — 230 000 Р</span>
-	                            <img src="img/dropdown.jpg" width="9" height="5" alt="">
-	                        </div>
-
-	                        <ul class="filter__select_list">
-	                            <li>Майнер PANTECH WX6 — 230 000 Р</li>
-	                            <li>Майнер PANTECH WX7 — 460 000 Р</li>
-	                            <li>Майнер PANTECH WX8 — 690 000 Р</li>
-	                            <li>Майнер PANTECH WX9 — 920 000 Р</li>
-	                            <li>Майнер PANTECH WX0 — 100 500 Р</li>
-	                        </ul>
+			<div class="container">
+				<div class="mine__desc">
+					<h2 class="mine__title">Продажа, аренда и размещение майнинг ферм</h2>
+					<img src="img/farm.png" width="534" height="296" alt="" class="mine__farm">
+				</div>
+				<div class="mine__calculator">
+					<h3 class="calculator__title">Калькулятор доходности</h3>
+					<div class="calculator__filter">
+						<div class="filter__buttons">
+							<button class="filter__button active_btn">Покупка</button>
+							<button class="filter__button">Аренда</button>
+							<button class="filter__button">Покупка и обслуживание</button>
 						</div>
 
-						<button class="filter__recount">Пересчитать</button>
+						<div class="filter__list-button">
+							<div class="filter__select_wrap" id="header_select">
+								<p class="filter__select_title">Ферма</p>
+
+								<div  class="filter__select">
+		                            <span class="filter__select_active">Майнер PANTECH WX6 — 230 000 Р</span>
+		                            <img src="img/dropdown.jpg" width="9" height="5" alt="">
+		                        </div>
+
+		                        <ul class="filter__select_list">
+		                            <li>Майнер PANTECH WX6 — 230 000 Р</li>
+		                            <li>Майнер PANTECH WX7 — 460 000 Р</li>
+		                            <li>Майнер PANTECH WX8 — 690 000 Р</li>
+		                            <li>Майнер PANTECH WX9 — 920 000 Р</li>
+		                            <li>Майнер PANTECH WX0 — 100 500 Р</li>
+		                        </ul>
+							</div>
+
+							<button class="filter__recount">Пересчитать</button>
+						</div>
 					</div>
-				</div>
-				<div class="calculator__desc">
-					<div class="calculator__desc_block">
-						<p>Вложения <br> <span>230 000 Р</span></p>
-					</div>
-					<div class="calculator__desc_block">
-						<p>Доходность <br> <span>~43 234 Р</span></p>
-					</div>
-					<div class="calculator__desc_block">
-						<p>Окупаемость <br> <span>6 мес</span></p>
-					</div>
-					<div class="calculator__desc_block">
-						<p>Через год <br> <span>~480 000 Р*</span></p>
+					<div class="calculator__desc">
+						<div class="calculator__desc_block">
+							<p>Вложения <br> <span>230 000 Р</span></p>
+						</div>
+						<div class="calculator__desc_block">
+							<p>Доходность <br> <span>~43 234 Р</span></p>
+						</div>
+						<div class="calculator__desc_block">
+							<p>Окупаемость <br> <span>6 мес</span></p>
+						</div>
+						<div class="calculator__desc_block">
+							<p>Через год <br> <span>~480 000 Р*</span></p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="header__pros">
-			<div class="pension">
-				<div class="pension__desc">
-					<h4>Отличная прибавка к пенсии</h4>
-					<p>Майнер PANTECH SX6, приносит 56 000 000 Р в месяц</p>
-					<a href="#">Подробнее</a>
+			<div class="container">
+				<div class="pension">
+					<div class="pension__desc">
+						<h4>Отличная прибавка к пенсии</h4>
+						<p>Майнер PANTECH SX6, приносит 56 000 000 Р в месяц</p>
+						<a href="#">Подробнее</a>
+					</div>
+
+					<img src="img/b1.png" width="258" height="235" alt="" class="pension__img">
 				</div>
 
-				<img src="img/b1.png" width="258" height="235" alt="" class="pension__img">
-			</div>
+				<div class="tarifs">
+					<h4>Куй пока горячо</h4>
+					<p>Снижение тарифов на электричество</p>
+					<img src="img/b2.png" alt="" width="100" height="138" class="tarifs__img">
+				</div>
 
-			<div class="tarifs">
-				<h4>Куй пока горячо</h4>
-				<p>Снижение тарифов на электричество</p>
-				<img src="img/b2.png" alt="" width="100" height="138" class="tarifs__img">
-			</div>
-
-			<div class="tablet">
-				<h4>Планшет в подарок</h4>
-				<p>При аренде оборудования от 50 000 Р/мес. Планшет со всеми необходимыми программами в подарок</p>
-				<img src="img/b3.png" alt="" width="168" height="84" class="tablet__img">
+				<div class="tablet">
+					<h4>Планшет в подарок</h4>
+					<p>При аренде оборудования от 50 000 Р/мес. Планшет со всеми необходимыми программами в подарок</p>
+					<img src="img/b3.png" alt="" width="168" height="84" class="tablet__img">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -132,7 +139,7 @@
         			<div class="catalogue__slide">
         				<header class="catalogue__slide_header">
         					<div class="slide__img">
-                                <img src="img/farm-01.png" width="185" height="182" alt="">               
+                                <img src="img/farm-01.png" width="185" height="182" alt="">
                             </div>
 
         					<div class="cripto-icons">
@@ -141,6 +148,7 @@
         						<img src="img/icons/lightcoin.svg" width="24" height="24" alt="">
         					</div>
         				</header>
+
         				<div class="catalogue__slide_desc">
         					<h4 class="farm-title">Ebit Miner E9 Plus - 9 TH/s</h4>
 
@@ -311,7 +319,7 @@
         			</div>
         		</div>
         		<div class="catalogue-index__all">
-        			<button class="all-farms">Все фермы (34)</button>
+        			<a href="catalogue.html" class="all-farms">Все фермы (34)</a>
         		</div>
             </div>
     	</section>
@@ -438,15 +446,18 @@
     	</section>
 
     	<section class="techpark">
-    		<div class="container">
-              <div class="techpark__desc">
-                    <h2>5000 м<sup>2</sup> <br> цифрового <br> удовольствия <span>Технопарк</span></h2>
+            <div class="techpark__desc">
+    		    <div class="container">
+                    <h2 class="techpark__desc-title">5000 м<sup>2</sup> <br> цифрового <br> удовольствия</h2>
+                    <h3>Технопарк</h3>
                     <p >BulloFarm входит в Резиденты индустриального технопарка «Усолье-Промтех» и пользуется льготами, предусмотренными как «Законом Иркутской области об индустриальных (промышленных) парках, технопарках в Иркутской области», так и Федеральным законом «О территориях опережающего социально-экономического развития в Российской Федерации».</p>
                     <a  href="#">Подробнее</a>
                 </div>
+            </div>
 
-                <div class="techpark__features">
-                    <h2>Особенности</h2>
+            <div class="techpark__features">
+                <div class="container">
+                    <h2 class="techpark__features-title">Особенности</h2>
 
                     <div class="features__blocks">
                         <div class="features__block">
@@ -473,15 +484,15 @@
                             <p >Технопарк входит в зону льготной электроэнергии, что делает майнинг ещё прибыльнее.</p>
                         </div>
                     </div>
-                </div>      
+                </div> 
             </div>
     	</section>
 
     	<section class="bid">
     		<div class="container">
                 <div class="bid__desc">
-                    <h2>Совместная покупка</h2>
-                    <p >Вы оставляете заявку на определенную сумму и ожидаете подтверждения на дополнительного обладателя оборудования. После этого с вами заключается договор на покупку оборудования и на дальнейшую его установку в Усолье Промтех. </p>
+                    <h2 class="bid__title">Совместная покупка</h2>
+                    <p>Вы оставляете заявку на определенную сумму и ожидаете подтверждения на дополнительного обладателя оборудования. После этого с вами заключается договор на покупку оборудования и на дальнейшую его установку в Усолье Промтех. </p>
                     <a href="#">Оставить заявку</a>
                 </div>
             </div>
@@ -510,7 +521,7 @@
                 <div class="warranty__blocks">
                     <div class="warranty__block">
                         <div class="warranty__number">
-                            <span>1</span><img src="img/arrow.jpg" alt="">
+                            <span>1</span><img class="warranty__arrow" src="img/arrow.jpg" alt="">
                         </div>
 
                         <div class="warranty__text">
@@ -520,7 +531,7 @@
 
                     <div class="warranty__block">
                         <div class="warranty__number">
-                            <span>2</span><img src="img/arrow.jpg" alt="">
+                            <span>2</span><img class="warranty__arrow" src="img/arrow.jpg" alt="">
                         </div>
 
                         <div class="warranty__text">
@@ -530,7 +541,7 @@
 
                     <div class="warranty__block">
                         <div class="warranty__number">
-                            <span>3</span><img src="img/arrow.jpg" alt="">
+                            <span>3</span><img class="warranty__arrow" src="img/arrow.jpg" alt="">
                         </div>
 
                         <div class="warranty__text">
@@ -555,6 +566,7 @@
     		<div class="container">
                 <div class="delivery__wrap">
                     <h2>Доставка</h2>
+
                     <div class="delivery__blocks">
                         <div class="delivery__block">
                             <p class="fs13">Куда доставить</p>
@@ -598,7 +610,7 @@
                         </div>
 
                         <div class="delivery__block delivery__count">
-                            <button class=" filter__recount">Пересчитать</button>
+                            <button class="filter__recount filter__recount_delivery">Пересчитать</button>
                             <span class="final__cost">5 531 Р</span>
                         </div>
                     </div> 
@@ -613,7 +625,7 @@
                     <a href="news.html">Все новости</a>
                 </header>
 
-                <div class="news__blocks">
+                <div class="news__blocks news__blocks_slick">
                     <acticle class="news__block">
                         <div class="article__content">
                             <a class="featured_img" href="single-news.html">
@@ -661,32 +673,44 @@
 
 <!-- start contacts.html-->
 <section class="footer__contacts">
-    <div class="contacts">
-        <div class="container">
-            <h2>Контакты</h2>
+    <div class="container">
+        <div class="contacts">
+            <div class="container__footer">
+                <h2 class="contacts__title">Контакты</h2>
 
-            <div class="contacts__block">
-                <img src="img/phone-call.svg" alt="">
-                <p>Единый телефон</p>
-                <p class="contacts__block_phone">8 800 123 45 67</p>
-            </div>
+                <div class="contacts__block">
+                    <img src="img/phone-call.svg" alt="">
 
-            <div class="contacts__block">
-                <img src="img/telegram.svg" alt="">
-                <p>Телеграм канал</p>
-                <a class="contacts__block_telegram" href="#">@bullofarm</a>
-            </div>
+                    <div>
+                        <p>Единый телефон</p>
+                        <p class="contacts__block_phone">8 800 123 45 67</p>
+                    </div>
+                </div>
 
-            <div class="contacts__block">
-                <img src="img/envelope.svg" alt="">
-                <p>E-mail</p>
-                <a class="contacts__block_email" href="mailto:info@bullofarm.ru">info@bullofarm.ru</a>
+                <div class="contacts__block">
+                    <img src="img/telegram.svg" alt="">
+
+                    <div>
+                        <p>Телеграм канал</p>
+                        <a class="contacts__block_telegram" href="#">@bullofarm</a>
+                    </div>
+                </div>
+
+                <div class="contacts__block">
+                    <img src="img/envelope.svg" alt="">
+
+                    <div>
+                        <p>E-mail</p>
+                        <a class="contacts__block_email" href="mailto:info@bullofarm.ru">info@bullofarm.ru</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="address">
-        <div class="container">
+        <div class="address">
+            <div class="container__footer">
+                
+            </div>
             <div class="address__city">
                 <h4 class="address__city_title">Иркутск</h4>
                 <p class="address__city_address">г.Усолье-Сибирское, <br> ул. Дзержинского, 1</p>
