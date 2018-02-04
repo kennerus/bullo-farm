@@ -1008,10 +1008,14 @@
 	}
 
 	@include breakpoint(max-width 1023px) {
-		flex-direction: column;
 		padding-top: 34px;
 		padding-bottom: 0;
 		background-image: none;
+
+		.container_contacts {
+			flex-wrap: wrap;
+			padding: 0;
+		}
 	}
 
 	@include breakpoint(max-width 767px) {
@@ -1019,11 +1023,20 @@
 	}
 }
 
+
+
 .contacts {
 	@include breakpoint(max-width 1023px) {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		width: 100%;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+
+	@include breakpoint(max-width 767px) {
+		padding: 0 10px;
 	}
 }
 
@@ -1051,12 +1064,17 @@
 
 		img {
 			margin-right: 20px;
+			opacity: 0.15;
 		}
 	}
 
 	.contacts__block_phone,
 	.contacts__block_telegram {
 		font-size: 24px;
+
+		@include breakpoint(max-width 767px) {
+			font-size: 18px;
+		}
 	}
 
 	.contacts__block_email {
@@ -1064,6 +1082,10 @@
 
 		@include breakpoint(max-width 1023px) {
 			font-size: 24px;
+		}
+
+		@include breakpoint(max-width 767px) {
+			font-size: 18px;
 		}
 	}
 
@@ -1080,15 +1102,21 @@
 	color: white;
 
 	@include breakpoint(max-width 1023px) {
+		width: 100%;
 		margin-top: 30px;
+		padding-right: 25px;
+		padding-left: 25px;
 		padding-bottom: 30px;
 		background-color: #3B424B;
 	}
 
 	@include breakpoint(max-width 767px) {
+		flex-wrap: wrap;
 		margin-top: 25px;
 		padding-top: 25px;
+		padding-right: 0;
 		padding-bottom: 0;
+		padding-left: 0;
 	}
 
 	.address__city {
@@ -1098,13 +1126,26 @@
 			margin-right: 0;
 		}
 
+		@include breakpoint(max-width 767px) {
+			width: 100%;
+			margin-right: 0;
+		}
+
 		.address__city_title {
-			font-family: $montserrat	
+			font-family: $montserrat;
+			font-size: 18px;
 		}
 
 		.address__city_address {
 			margin-top: 5px;
 			line-height: 1.25;
+		}
+
+		@include breakpoint(max-width 767px) {
+			.address__city_title,
+			.address__city_address {
+				padding-left: 15px;
+			}
 		}
 
 		.address__city_map {
@@ -1118,6 +1159,10 @@
 			@include breakpoint(max-width 1023px) {
 				width: 335px;
 				height: 258px
+			}
+
+			@include breakpoint(max-width 767px) {
+				width: 100%;
 			}
 		}
 	}
