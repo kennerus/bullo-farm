@@ -1,0 +1,15 @@
+.catalogue__blocks {
+	display: flex;
+	flex-wrap: wrap;
+
+	.catalogue__slide {
+		width: 350px;
+		margin: 0;
+		margin-top: 30px;
+		margin-right: 30px;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+}

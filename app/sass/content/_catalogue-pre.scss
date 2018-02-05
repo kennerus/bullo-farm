@@ -18,8 +18,14 @@
 .catalogue-pre__block {
 	display: flex;
 	margin-top: 30px;
+	border: 1px solid #EBECF0;
+	border-right: none;
 	border-radius: 4px;
 	overflow: hidden;
+
+	&:hover {
+		box-shadow: 0 15px 33px 0 rgba(153,130,161,0.18);
+	}
 }
 
 .catalogue-pre__block-main {
@@ -71,6 +77,15 @@
 	td {
 		position: relative;
 		vertical-align: top;
+
+		&:first-child {
+			white-space: nowrap;
+		}
+	}
+
+	.tddashedbot::before {
+		top: 13px;
+		bottom: auto;
 	}
 }
 
@@ -101,13 +116,9 @@
     border-bottom: 1px solid #E5E5E5;
 }
 
-.in-stock,
-.not-in-stock {
-    display: none;
-}
-
 .not-in-stock {
 	p {
+		width: 100%;
 		margin-top: 6px;
 
 		&:first-child {
@@ -116,8 +127,36 @@
 	}
 }
 
-.catalogue-pre__aval_active {
-    display: block;
+.not-in-stock,
+.prepay {
+    display: none;
+}
+
+.in-stock {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	img {
+		margin-right: 5px;
+	}
+}
+
+
+.catalogue-pre__prepay {
+	.not-in-stock {
+		display: flex;
+	    align-items: center;
+	    flex-wrap: wrap;
+	}
+
+	.in-stock {
+		display: none;
+	}
+
+	.prepay {
+		display: block;
+	}
 }
 
 .catalogue-pre__number {
