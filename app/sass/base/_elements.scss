@@ -296,7 +296,22 @@
 
 .page-wrap_about {
     background: url(../img/about.png) no-repeat,
-                url(../img/header-bg.png) no-repeat;
+    url(../img/header-bg.png) no-repeat;
     background-position: 50% 21%,50% 0;
     background-size: 100%, 100%;
+}
+
+.tddashedbot {
+    min-width: 10px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: -3px;
+        bottom: 3px;
+        width: 135%;
+        height: 1px;
+        border-bottom: 1px dashed #9B9B9B;;
+    }
 }
