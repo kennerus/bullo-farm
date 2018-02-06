@@ -163,6 +163,11 @@
 
 .page__title {
     font-size: 48px;
+
+    @include breakpoint(max-width 767px) {
+        font-size: 24px;
+        text-align: center;
+    }
 }
 
 .main-news {
@@ -292,6 +297,11 @@
     background-image: url(../img/header-bg.png);
     background-position-x: center;
     background-repeat: no-repeat;
+
+    @include breakpoint(max-width 767px) {
+        background: none;
+        background-color: #F4F4F4;
+    }
 }
 
 .page-wrap_about {
@@ -299,6 +309,16 @@
     url(../img/header-bg.png) no-repeat;
     background-position: 50% 21%,50% 0;
     background-size: 100%, 100%;
+
+    @include breakpoint(max-width 1023px) {
+        background-position: 50% 26%,50% 0;
+        background-size: 130%,100%;
+    }
+
+    @include breakpoint(max-width 767px) {
+        background: none;
+        background-color: #F4F4F4;
+    }
 }
 
 .tddashedbot {

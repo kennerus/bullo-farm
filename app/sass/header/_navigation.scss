@@ -6,6 +6,7 @@
 
 		@include breakpoint(max-width 767px) {
 			padding: 10px;
+			background-color: #F4F4F4;
 			border-bottom: 1px solid #E5E5E5;
 		}
 	}
