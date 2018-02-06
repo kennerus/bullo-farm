@@ -452,6 +452,7 @@
 		line-height: 1.25;
 
 		@include breakpoint(max-width 767px) {
+			max-width: 100%;
 			margin-top: 15px;
 		}
 	}
@@ -486,10 +487,16 @@
 	.techpark__features-title {
 		position: absolute;
 		top: -58px;
+		font-family: $montserratBlack;
+		font-size: 72px;
+		color: #e8eaec;
 		z-index: 0;
 
 		@include breakpoint(max-width 767px) {
 			position: static;
+			font-family: $montserrat;
+			color: #37383E;
+			font-size: 18px;
 		}
 	}
 }
@@ -576,7 +583,7 @@
 	min-height: 500px;
 	margin-top: 100px;
 	padding-top: 75px;
-	background: url(../img/1280.png) no-repeat;
+	background: url(../img/1920.png) no-repeat;
 	background-size: cover;
 	background-position: right center;
 
@@ -606,11 +613,20 @@
 	max-width: 400px;
 	width: 100%;
 	color: white;
+	margin-top: 50px;
+
+	@include breakpoint(max-width 767px) {
+		max-width: 100%;
+	}
 
 	p {
 		max-width: 350px;
 		margin-top: 13px;
 		line-height: 1.25;
+
+		@include breakpoint(max-width 767px) {
+			max-width: 100%;
+		}
 	}
 
 	a {

@@ -75,6 +75,15 @@ $(document).ready(function () {
             variableWidth: true,
             infinite: true
         })
+
+        $('.news__blocks').slick({
+            dots: true,
+            slidesToShow: 1,
+            centerMode: true,
+            appendArrows: false,
+            variableWidth: true,
+            infinite: true
+        })
     }
 });
 

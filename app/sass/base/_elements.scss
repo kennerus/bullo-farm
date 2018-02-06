@@ -231,6 +231,10 @@
             background-color: white;
         }
 
+        @include breakpoint(max-width 767px) {
+            display: block;
+        }
+
         &:last-of-type {
             border-right: none;
         }
