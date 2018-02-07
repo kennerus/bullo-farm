@@ -30,40 +30,28 @@ function replaceSubject(subject, subjectList, activeSubject) {
     }
 }
 
-if (idHeader) {
+if (idHeader || idDelivery) {
     idHeader.addEventListener('click', function() {
         openList(idHeader, 'filter__select_list', 'filter__select');
     });
-
-    replaceSubject(idHeader, 'filter__select_list', 'filter__select_active');
-}
-if (idDelivery) {
     idDelivery.addEventListener('click', function() {
         openList(idDelivery, 'filter__select_list', 'filter__select');
     });
+
+    replaceSubject(idHeader, 'filter__select_list', 'filter__select_active');
     replaceSubject(idDelivery, 'filter__select_list', 'filter__select_active');
 }
 
 
-$(function () {
+$(document).ready(function () {
+    $('#preorder__tel').mask('+7 (999) 999-99-99');
 
-    // $('#preorder__tel').mask('+7 (999) 999-99-99');
+    var preorderBtn = $(".preorder__btn");
 
-    $(document).on('click', '.send-request', function(event) {
-        event.preventDefault();
-
-        $('.fancybox-close-small').click();
-        $('#sent').fadeIn();
-
-        return false;
-    })
-
-    $(document).on('click', '.sent__close, .sent__overlay', function() {
-        $('#sent').fadeOut();
-    })
-
-    $('[data-fancybox]').fancybox({
-        smallBtn : true,
+    $(preorderBtn).on('click', function() {
+        console.log('sdfsdfs');
+        var findModal = preorderBtn.closest($('.modal'));
+        findModal.fadeIn();
     })
 
     $('.catalogue__slider').slick({
@@ -71,15 +59,15 @@ $(function () {
         slidesToScroll: 3,
         appendArrows: $('.catalogue-index__nav'),
         responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-              centerMode: true,
-              slidesToShow: 1,
-              variableWidth: true
-          }
-        }
-      ]
+            {
+                breakpoint: 1024,
+                settings: {
+                  centerMode: true,
+                  slidesToShow: 1,
+                  variableWidth: true
+                }
+            }
+        ]
     })
 
     if($(window).width() < 767) {

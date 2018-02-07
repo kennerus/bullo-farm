@@ -160,15 +160,15 @@
                             <div class="quantity">
                                 <p class="fs13">Количество</p>
                                 <div class="catalogue-pre__number-count">
-                                    <div class="minus"><img alt="" class="" src="img/minus.png"></div><input type="text" value="1">
-                                    <div class="plus"><img alt="" class="" src="img/plus.png"></div>
+                                    <div class="minus"><img alt="" src="img/minus.png"></div><input type="text" value="1">
+                                    <div class="plus"><img alt="" src="img/plus.png"></div>
                                 </div>
                             </div>
                             <div class="prepay">
                                 <p class="fs13">Предоплата</p>
                                 <div class="catalogue-pre__number-count">
-                                    <div class="minus-p"><img alt="" class="" src="img/minus.png"></div><input type="text" value="1%">
-                                    <div class="plus-p"><img alt="" class="" src="img/plus.png"></div>
+                                    <div class="minus-p"><img alt="" src="img/minus.png"></div><input type="text" value="1%">
+                                    <div class="plus-p"><img alt="" src="img/plus.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -180,7 +180,94 @@
                                     <p class="price__number">236 000 <sup>Р</sup></p>
                                 </div>
                                 <div class="preorder">
-                                    <button class="preorder__btn">Предзаказать</button>
+                                    <a class="preorder__btn" data-fancybox data-src="#modal1" href="javascript:;">Предзаказать</a>
+
+                                    <div class="modal" id="modal1">
+                                        <div class="modal__overlay"></div>
+
+                                        <div class="container modal__content">
+                                            <div class="modal__order">
+                                                <h2>Предзаказ</h2>
+
+                                                <form class="order-form">
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">Ваше имя</span>
+                                                        <input type="text" class="text-input" id="order__name">
+                                                    </label>
+                                                    
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">Телефон</span>
+                                                        <input type="text" class="text-input tel-input" id="order__tel">
+                                                    </label>
+                                                    
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">E-mail</span>
+                                                        <input type="email" class="text-input" id="order__email">
+                                                    </label>
+                                                    
+                                                    <div class="order__delivery order__row">
+                                                        <p class="fs13 label">Куда доставить</p>
+
+                                                        <div class="delivery__choise">
+                                                            <input id="to_techpark" type="radio" name="where_deliver" checked>
+                                                            <label for="to_techpark">В технопарк</label>
+
+                                                            <input id="another_place" type="radio" name="where_deliver">
+                                                            <label for="another_place">В другое место</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="order__company order__row">
+                                                        <p class="fs13 label">Компания</p>
+
+                                                        <div class="delivery__choise">
+                                                            <input id="ems" type="radio" name="how_deliver" checked>
+                                                            <label for="ems">EMS</label>
+
+                                                            <input id="dhl" type="radio" name="how_deliver">
+                                                            <label for="dhl">DHL</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="order__address order__row">
+                                                        <p class="fs13 label">Адрес</p>
+                                                        <p class="fs13">г.Усолье-Сибирское, ул. Дзержинского, 1</p>
+                                                    </div>
+
+                                                    <input class="send-request" type="submit" value="Отправить заявку">
+                                                </form>
+                                            </div>
+
+                                            <div class="modal__order-desc">
+                                                <h3 class="modal__mine-name">Ebit Miner E9 Plus - 9 TH/s</h3>
+
+                                                <div class="order__desc">
+                                                    <div class="order__quantity">
+                                                        <p class="fs13 greytext">Количество</p>
+                                                        <p class="order__desc-number">4 шт.</p>
+                                                    </div>
+
+                                                    <div class="order__prepay">
+                                                        <p class="fs13 greytext">Предоплата</p>
+                                                        <p class="order__desc-number">60%</p>
+                                                    </div>
+
+                                                    <div class="order__total-cost">
+                                                        <p class="fs13 greytext">Итоговая стоимость</p>
+                                                        <p class="order__desc-number"><span class="fs18 crossed">1 536 000 Р</span><br>1 236 000 Р</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order__instructions">
+                                                    <p>После отправки с вами свяжется наш оператор и уточнит детали заказа.</p>
+                                                    <p class="purple-text">Обращаем ваше внимание, предоплата вносится в течении 7 дней после подписания договора.</p>
+                                                </div>
+                                            </div>
+                                            <!-- <button class="modal__close">
+                                                <img src="img/cross.png" width="14" height="14" alt="">
+                                            </button> -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -361,15 +448,15 @@
                             <div class="quantity">
                                 <p class="fs13">Количество</p>
                                 <div class="catalogue-pre__number-count">
-                                    <div class="minus"><img alt="" class="" src="img/minus.png"></div><input type="text" value="1">
-                                    <div class="plus"><img alt="" class="" src="img/plus.png"></div>
+                                    <div class="minus"><img alt="" src="img/minus.png"></div><input type="text" value="1">
+                                    <div class="plus"><img alt=""  src="img/plus.png"></div>
                                 </div>
                             </div>
                             <div class="prepay">
                                 <p class="fs13">Предоплата</p>
                                 <div class="catalogue-pre__number-count">
-                                    <div class="minus-p"><img alt="" class="" src="img/minus.png"></div><input type="text" value="1%">
-                                    <div class="plus-p"><img alt="" class="" src="img/plus.png"></div>
+                                    <div class="minus-p"><img alt="" src="img/minus.png"></div><input type="text" value="1%">
+                                    <div class="plus-p"><img alt="" src="img/plus.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -381,7 +468,94 @@
                                     <p class="price__number">236 000 <sup>Р</sup></p>
                                 </div>
                                 <div class="preorder">
-                                    <button class="preorder__btn">Предзаказать</button>
+                                    <a class="preorder__btn" data-fancybox data-src="#modal2" href="javascript:;">Предзаказать</a>
+
+                                    <div class="modal" id="modal2">
+                                        <div class="modal__overlay"></div>
+
+                                        <div class="container modal__content">
+                                            <div class="modal__order">
+                                                <h2>Предзаказ</h2>
+
+                                                <form class="order-form">
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">Ваше имя</span>
+                                                        <input type="text" class="text-input" id="order__name">
+                                                    </label>
+                                                    
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">Телефон</span>
+                                                        <input type="text" class="text-input tel-input" id="order__tel">
+                                                    </label>
+                                                    
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">E-mail</span>
+                                                        <input type="email" class="text-input" id="order__email">
+                                                    </label>
+                                                    
+                                                    <div class="order__delivery order__row">
+                                                        <p class="fs13 label">Куда доставить</p>
+
+                                                        <div class="delivery__choise">
+                                                            <input id="to_techpark" type="radio" name="where_deliver" checked>
+                                                            <label for="to_techpark">В технопарк</label>
+
+                                                            <input id="another_place" type="radio" name="where_deliver">
+                                                            <label for="another_place">В другое место</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="order__company order__row">
+                                                        <p class="fs13 label">Компания</p>
+
+                                                        <div class="delivery__choise">
+                                                            <input id="ems" type="radio" name="how_deliver" checked>
+                                                            <label for="ems">EMS</label>
+
+                                                            <input id="dhl" type="radio" name="how_deliver">
+                                                            <label for="dhl">DHL</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="order__address order__row">
+                                                        <p class="fs13 label">Адрес</p>
+                                                        <p class="fs13">г.Усолье-Сибирское, ул. Дзержинского, 1</p>
+                                                    </div>
+
+                                                    <input class="send-request" type="submit" value="Отправить заявку">
+                                                </form>
+                                            </div>
+
+                                            <div class="modal__order-desc">
+                                                <h3 class="modal__mine-name">Ebit Miner E9 Plus - 9 TH/s</h3>
+
+                                                <div class="order__desc">
+                                                    <div class="order__quantity">
+                                                        <p class="fs13 greytext">Количество</p>
+                                                        <p class="order__desc-number">4 шт.</p>
+                                                    </div>
+
+                                                    <div class="order__prepay">
+                                                        <p class="fs13 greytext">Предоплата</p>
+                                                        <p class="order__desc-number">60%</p>
+                                                    </div>
+
+                                                    <div class="order__total-cost">
+                                                        <p class="fs13 greytext">Итоговая стоимость</p>
+                                                        <p class="order__desc-number"><span class="fs18 crossed">1 536 000 Р</span><br>1 236 000 Р</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order__instructions">
+                                                    <p>После отправки с вами свяжется наш оператор и уточнит детали заказа.</p>
+                                                    <p class="purple-text">Обращаем ваше внимание, предоплата вносится в течении 7 дней после подписания договора.</p>
+                                                </div>
+                                            </div>
+                                            <!-- <button class="modal__close">
+                                                <img src="img/cross.png" width="14" height="14" alt="">
+                                            </button> -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -562,15 +736,15 @@
                             <div class="quantity">
                                 <p class="fs13">Количество</p>
                                 <div class="catalogue-pre__number-count">
-                                    <div class="minus"><img alt="" class="" src="img/minus.png"></div><input type="text" value="1">
-                                    <div class="plus"><img alt="" class="" src="img/plus.png"></div>
+                                    <div class="minus"><img alt="" src="img/minus.png"></div><input type="text" value="1">
+                                    <div class="plus"><img alt="" src="img/plus.png"></div>
                                 </div>
                             </div>
                             <div class="prepay">
                                 <p class="fs13">Предоплата</p>
                                 <div class="catalogue-pre__number-count">
-                                    <div class="minus-p"><img alt="" class="" src="img/minus.png"></div><input type="text" value="1%">
-                                    <div class="plus-p"><img alt="" class="" src="img/plus.png"></div>
+                                    <div class="minus-p"><img alt="" src="img/minus.png"></div><input type="text" value="1%">
+                                    <div class="plus-p"><img alt="" src="img/plus.png"></div>
                                 </div>
                             </div>
                         </div>
@@ -582,7 +756,94 @@
                                     <p class="price__number">236 000 <sup>Р</sup></p>
                                 </div>
                                 <div class="preorder">
-                                    <button class="preorder__btn">Предзаказать</button>
+                                    <a class="preorder__btn" data-fancybox data-src="#modal3" href="javascript:;">Предзаказать</a>
+
+                                    <div class="modal" id="modal3">
+                                        <div class="modal__overlay"></div>
+
+                                        <div class="container modal__content">
+                                            <div class="modal__order">
+                                                <h2>Предзаказ</h2>
+
+                                                <form class="order-form">
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">Ваше имя</span>
+                                                        <input type="text" class="text-input" id="order__name">
+                                                    </label>
+                                                    
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">Телефон</span>
+                                                        <input type="text" class="text-input tel-input" id="order__tel">
+                                                    </label>
+                                                    
+                                                    <label class="order__row">
+                                                        <span class="fs13 label">E-mail</span>
+                                                        <input type="email" class="text-input" id="order__email">
+                                                    </label>
+                                                    
+                                                    <div class="order__delivery order__row">
+                                                        <p class="fs13 label">Куда доставить</p>
+
+                                                        <div class="delivery__choise">
+                                                            <input id="to_techpark" type="radio" name="where_deliver" checked>
+                                                            <label for="to_techpark">В технопарк</label>
+
+                                                            <input id="another_place" type="radio" name="where_deliver">
+                                                            <label for="another_place">В другое место</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="order__company order__row">
+                                                        <p class="fs13 label">Компания</p>
+
+                                                        <div class="delivery__choise">
+                                                            <input id="ems" type="radio" name="how_deliver" checked>
+                                                            <label for="ems">EMS</label>
+
+                                                            <input id="dhl" type="radio" name="how_deliver">
+                                                            <label for="dhl">DHL</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="order__address order__row">
+                                                        <p class="fs13 label">Адрес</p>
+                                                        <p class="fs13">г.Усолье-Сибирское, ул. Дзержинского, 1</p>
+                                                    </div>
+
+                                                    <input class="send-request" type="submit" value="Отправить заявку">
+                                                </form>
+                                            </div>
+
+                                            <div class="modal__order-desc">
+                                                <h3 class="modal__mine-name">Ebit Miner E9 Plus - 9 TH/s</h3>
+
+                                                <div class="order__desc">
+                                                    <div class="order__quantity">
+                                                        <p class="fs13 greytext">Количество</p>
+                                                        <p class="order__desc-number">4 шт.</p>
+                                                    </div>
+
+                                                    <div class="order__prepay">
+                                                        <p class="fs13 greytext">Предоплата</p>
+                                                        <p class="order__desc-number">60%</p>
+                                                    </div>
+
+                                                    <div class="order__total-cost">
+                                                        <p class="fs13 greytext">Итоговая стоимость</p>
+                                                        <p class="order__desc-number"><span class="fs18 crossed">1 536 000 Р</span><br>1 236 000 Р</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="order__instructions">
+                                                    <p>После отправки с вами свяжется наш оператор и уточнит детали заказа.</p>
+                                                    <p class="purple-text">Обращаем ваше внимание, предоплата вносится в течении 7 дней после подписания договора.</p>
+                                                </div>
+                                            </div>
+                                            <!-- <button class="modal__close">
+                                                <img src="img/cross.png" width="14" height="14" alt="">
+                                            </button> -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

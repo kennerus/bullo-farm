@@ -90,6 +90,7 @@
 		.buy-button {
 			box-shadow: 0 3px 6px 0 rgba(95,26,93,0.5);
 			transition: box-shadow 0.2s;
+			cursor: pointer;
 		}
 	}
 }
@@ -236,6 +237,8 @@
 	}
 
 	.buy-button {
+		padding: 10px 0;
+		text-align: center;
 		color: white;
 		background-color: #92278F;
 		border: none;
@@ -1127,6 +1130,10 @@
 		@include breakpoint(max-width 767px) {
 			width: 100%;
 			margin-right: 0;
+
+			&:nth-child(n + 2) {
+				margin-top: 30px;
+			}
 		}
 
 		.address__city_title {
@@ -1137,6 +1144,13 @@
 		.address__city_address {
 			margin-top: 5px;
 			line-height: 1.25;
+
+			@include breakpoint(max-width 767px) {
+				margin-top: 0;
+				br {
+					display: none;
+				}
+			}
 		}
 
 		@include breakpoint(max-width 767px) {

@@ -227,9 +227,11 @@
 	}
 
 	.preorder__btn {
+		display: block;
 		width: 155px;
 		padding: 10px 0;
 		color: white;
+		text-align: center;
 		background-color: #92278F;
 		border: none;
 		border-radius: 2px;
