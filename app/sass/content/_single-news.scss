@@ -10,13 +10,29 @@
 .single-news {
 	margin-top: 80px;
 
+	@include breakpoint(max-width 1023px) {
+		margin-top: 30px;
+	}
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 15px;
+	}
+
 	.container_gray {
 		margin-top: 35px;
+
+		@include breakpoint(max-width 1023px) {
+			margin-top: 20px;
+		}
 	}
 }
 
 .news__header_single {
 	font-size: 24px;
+
+	@include breakpoint(max-width 767px) {
+		font-size: 18px;
+	}
 }
 
 .single__header,
@@ -24,14 +40,30 @@
 .single__footer {
 	padding-left: 90px;
 	padding-right: 40px;
+
+	@include breakpoint(max-width 1023px) {
+		padding: 0;
+	}
 }
 
 .single__header {
 	padding-top: 43px;
 
+	@include breakpoint(max-width 1023px) {
+		padding-top: 20px;
+	}
+
+	@include breakpoint(max-width 767px) {
+		padding-top: 0;
+	}
+
 	time {
 		display: inline-block;
 		margin-top: 25px;
+
+		@include breakpoint(max-width 1023px) {
+			margin-top: 15px;
+		}
 	}
 }
 
@@ -68,6 +100,10 @@
 	.single__content_text {
 		margin-top: 45px;
 
+		@include breakpoint(max-width 767px) {
+			margin-top: 20px;
+		}
+
 		p {
 			margin-top: 10px;
 			line-height: 1.25;
@@ -92,16 +128,42 @@
 	padding-bottom: 20px;
 	background-color: #92278F;
 
+	@include breakpoint(max-width 1023px) {
+		margin-right: -25px;
+		margin-left: -25px;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 20px;
+		margin-right: -10px;
+		margin-left: -10px;
+		padding: 10px;
+	}
+
 	h3 {
 		color: white;
 		font-size: 24px;
+
+		@include breakpoint(max-width 767px) {
+			font-size: 18px;
+		}
 	}
 }
 
 .news_single {
 	padding: 55px 0;
+
+	@include breakpoint(max-width 767px) {
+		padding: 20px 0;
+	}
 }
 
 .news__blocks_single {
 	margin-top: 35px;
+
+	@include breakpoint(max-width 767px) {
+		margin-top: 15px;
+	}
 }

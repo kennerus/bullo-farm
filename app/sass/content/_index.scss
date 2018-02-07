@@ -317,13 +317,14 @@
 		padding: 20px;
 	}
 
-	@include breakpoint(max-width 1024px) {
+	@include breakpoint(max-width 1023px) {
+		min-width: 350px;
 		height: 360px;
 		margin-right: 10px;
 	}
 
 	@include breakpoint(max-width 767px) {
-		width: 100%;
+		min-width: 100%;
 		margin-top: 10px;
 		margin-right: 0;
 		padding: 15px;
@@ -345,6 +346,10 @@
 		.cloud__block_title {
 			font-size: 24px;
 		}
+	}
+
+	.cloud__content-autoBtc {
+		margin-top: 20px;
 	}
 
 	.cloud__footer {
@@ -380,25 +385,6 @@
 
 .techpark {
 	margin-top: 26px;
-	background-image: url(../img/Bitmap.png);
-	background-repeat: no-repeat;
-	background-position: right top;
-	background-size: (50%);
-
-	@include breakpoint(max-width 1200px) {
-		background-position: 125% 8%;
-		background-size: 70%;
-	}
-
-	@include breakpoint(max-width 1023px) {
-		background-image: url(../img/build.png);
-		background-position: 50vw 8%;
-	}
-
-	@include breakpoint(max-width 767px) {
-		background-image: none;
-	}
-
 
 	.techpark__desc-title {
 		font-family: $montserratBlack;
@@ -413,12 +399,16 @@
 
 	h3 {
 		position: absolute;
-		top: 220px;
+		top: 135px;
 		transform: translateY(-50%);
-		left: 50px;
+		left: 5px;
 		font-family: $montserratBlack;
 		font-size: 36px;
 		color: #37383E;
+
+		@include breakpoint(max-width 1200px) {
+			left: 50px;
+		}
 
 		@include breakpoint(max-width 1023px) {
 			left: 30px;
@@ -436,6 +426,28 @@
 
 .techpark__desc {
 	padding-top: 90px;
+
+	.container {
+		background-image: url(../img/build.png);
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-size: 63%;
+
+		@include breakpoint(max-width 1200px) {
+			background-position: 125% 8%;
+			background-size: 63%;
+		}
+
+		@include breakpoint(max-width 1023px) {
+			background-image: url(../img/build.png);
+			background-position: 45vw 58%;
+			background-size: 95%;
+		}
+
+		@include breakpoint(max-width 767px) {
+			background: none
+		}
+	}
 
 	@include breakpoint(max-width 767px) {
 		padding: 20px 0;
@@ -602,10 +614,9 @@
 	@include breakpoint(max-width 767px) {
 		min-height: inherit;
 		padding: 30px 0;
-		background: url(../img/romb_purple.png) no-repeat, 
-		linear-gradient(55.43deg, #92278F 0%, #580056 100%);
-		background-size: 200%,contain;
-		background-position: -4% 140px,center;
+		background: url(../img/romb.png) no-repeat;
+		background-size: cover;
+		background-position: right;
 	}
 }
 
@@ -760,6 +771,7 @@
 		padding-top: 30px;
 		background-image: url(../img/warranty-mob.png);
 		background-size: cover;
+		background-position: bottom;
 	}
 }
 

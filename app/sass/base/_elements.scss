@@ -1,4 +1,4 @@
-.active_menu {
+ .active_menu {
     border-bottom: 1px solid #788089;
     opacity: 0.7;
 }
@@ -143,7 +143,7 @@
     }
 }
 
-.news_index {
+.news__blocks_slick {
     @include breakpoint(max-width 1023px) {
         .news__block:last-child {
             display: none;
@@ -159,6 +159,10 @@
 
 .news_white {
     background-color: white;
+
+    @include breakpoint(max-width 1023px) {
+        background-color: transparent;
+    }
 }
 
 .page__title {
@@ -172,6 +176,10 @@
 
 .main-news {
     margin-top: 65px;
+
+    @include breakpoint(max-width 767px) {
+        margin-top: 0;
+    }
 }
 
 .news_page {
@@ -184,8 +192,12 @@
     justify-content: space-between;
     padding-left: 30px;
 
-    @include breakpoint(max-width 767px) {
+    @include breakpoint(max-width 1023px) {
         padding-left: 0;
+    }
+
+    @include breakpoint (max-width 767px) {
+        padding-left: 10px;
     }
 
     a {
@@ -194,6 +206,7 @@
         color: #37383E;
 
         @include breakpoint(max-width 767px) {
+            padding-right: 20px;
             font-size: 16px;
         }
     }
@@ -229,10 +242,6 @@
         @include breakpoint(max-width 1023px) {
             width: 49%;
             background-color: white;
-        }
-
-        @include breakpoint(max-width 767px) {
-            display: block;
         }
 
         &:last-of-type {
@@ -285,12 +294,33 @@
 
         .news__block {
             width: 90vw;
+            margin: 0 10px;
         }
     }
 }
 
 .news__blocks_wrap {
     flex-wrap: wrap;
+
+    @include breakpoint(max-width 1023px) {
+        .news__block {
+            margin-top: 20px;
+
+            &:nth-child(-n + 2) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    @include breakpoint(max-width 576px) {
+        .news__block {
+            width: 100%;
+
+            &:nth-child(n + 2) {
+                margin-top: 20px;
+            }
+        }
+    }
 }
 
 .container_gray {
@@ -348,7 +378,7 @@
     display: table;
     width: 100%;
     font-size: 13px;
-    margin-top: 5px;
+    margin-top: 7px;
 
     .cell {
         display: table-cell;
@@ -391,7 +421,8 @@
     }
 
     .cell-dot:before {
-        position: static;
+        top: auto;
+        bottom: 3px;
     }
 
     .cell:nth-child(2) {

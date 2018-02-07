@@ -30,15 +30,18 @@ function replaceSubject(subject, subjectList, activeSubject) {
     }
 }
 
-idHeader.addEventListener('click', function() {
-    openList(idHeader, 'filter__select_list', 'filter__select');
-});
-idDelivery.addEventListener('click', function() {
-    openList(idDelivery, 'filter__select_list', 'filter__select');
-});
+if (idHeader || idDelivery) {
+    idHeader.addEventListener('click', function() {
+        openList(idHeader, 'filter__select_list', 'filter__select');
+    });
+    idDelivery.addEventListener('click', function() {
+        openList(idDelivery, 'filter__select_list', 'filter__select');
+    });
 
-replaceSubject(idHeader, 'filter__select_list', 'filter__select_active');
-replaceSubject(idDelivery, 'filter__select_list', 'filter__select_active');
+    replaceSubject(idHeader, 'filter__select_list', 'filter__select_active');
+    replaceSubject(idDelivery, 'filter__select_list', 'filter__select_active');
+}
+
 
 $(document).ready(function () {
     $('.catalogue__slider').slick({
@@ -47,12 +50,12 @@ $(document).ready(function () {
         appendArrows: $('.catalogue-index__nav'),
         responsive: [
             {
-              breakpoint: 1024,
-              settings: {
-                centerMode: true,
-                slidesToShow: 1,
-                variableWidth: true
-              }
+                breakpoint: 1024,
+                settings: {
+                  centerMode: true,
+                  slidesToShow: 1,
+                  variableWidth: true
+                }
             }
         ]
     })
