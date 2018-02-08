@@ -64,6 +64,7 @@ $(function () {
 
     $('[data-fancybox]').fancybox({
         smallBtn : true,
+        buttons: false
     })
 
     $('.catalogue__slider').slick({
