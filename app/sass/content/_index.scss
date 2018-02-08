@@ -338,6 +338,7 @@
 
 	@include breakpoint(max-width 767px) {
 		min-width: 100%;
+		height: auto;
 		margin-top: 10px;
 		margin-right: 0;
 		padding: 15px;
@@ -1138,6 +1139,8 @@
 		}
 
 		@include breakpoint(max-width 767px) {
+			display: flex;
+			flex-wrap: wrap;
 			width: 100%;
 			margin-right: 0;
 

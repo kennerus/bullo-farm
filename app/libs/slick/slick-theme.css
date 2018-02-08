@@ -96,6 +96,7 @@
     top: 20px;
     right: 66px;
 }
+
 [dir='rtl'] .slick-prev
 {
     top: 20px;
@@ -121,7 +122,13 @@
 [dir='rtl'] .slick-next
 {
     top: 20px;
-    right: 44px;
+    right: 66px;
+}
+@media (max-width: 767px) {
+    .slick-prev,
+    [dir='rtl'] .slick-next {
+        right: 45px;
+    }
 }
 .slick-next:before
 {

@@ -107,6 +107,10 @@
                 text-overflow: hidden;
                 overflow-x: hidden;
             }
+
+             @include breakpoint(max-width 767px) {
+                width: 145px;
+            }
         }
     }
     .open_list {
@@ -380,16 +384,54 @@
     font-size: 13px;
     margin-top: 7px;
 
-    @include breakpoint(max-width 610px) {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
     .cell {
         display: table-cell;
         width: 1px;
+        
+        &:first-child {
+            white-space: nowrap;
+        }
+    }
 
+    .width450 {
+        width: 450px;
+
+        @include breakpoint(max-width 1200px) {
+            width: 330px;
+        }
+    }
+
+    .width160 {
+        width: 160px;
+    }
+
+    .cell-dot {
+        position: relative;
+        display: table-cell;
+        
+        &:before {
+            content:'';
+            position: absolute;
+            top: 13px;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dotted #9B9B9B;;
+        }
+    }
+}
+
+.tabcontent  {
+    .table {
+        @include breakpoint(max-width 610px) {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    }
+
+    .cell {
         @include breakpoint(max-width 610px) {
             display: block;
         }
@@ -403,39 +445,9 @@
         }
     }
 
-    .width450 {
-        width: 450px;
-
-        @include breakpoint(max-width 1200px) {
-            width: 330px;
-        }
-
-        @include breakpoint(max-width 610px) {
-            width: auto;
-        }
-    }
-
-    .width160 {
-        width: 160px;
-    }
-
     .cell-dot {
-        position: relative;
-        display: table-cell;
-
-        @include breakpoint(max-width 610px) {
+         @include breakpoint(max-width 610px) {
             display: none;
-        }
-        
-        &:before {
-            content:'';
-            position: absolute;
-            top: 13px;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 1px;
-            border-bottom: 1px dotted #9B9B9B;;
         }
     }
 }
@@ -518,6 +530,10 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
+
+        @include breakpoint(max-width 350px) {
+            right: -10px;
+        }
     }
 }
 
@@ -816,7 +832,9 @@
 }
 
 .tabcontent {
-    display: none;
+    @include breakpoint(max-width 1023px) {
+        display: none;
+    }
 }
 
 .db {
