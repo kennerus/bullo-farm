@@ -295,8 +295,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="catalogue-pre__block-nav">
+                    <button class="modal__nav tablinks modal__nav_active" onclick="openTab(event, 'order1')">Заказ</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'return1')">Доходность</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'specs1')">Характеристики</button>
+                </div>
+
                 <div class="catalogue-pre__block-aside">
-                    <div class="aside__content">
+                    <div class="aside__content tabcontent db" id="order1">
                         <div class="catalogue-pre__aval">
                             <div class="in-stock">
                                 <img alt="" src="img/check.jpg">
@@ -448,7 +455,7 @@
                             <p class="catalogue-pre__service-rent">5 000 <sup class="fs13">Р/МЕС</sup></p>
                         </div>
                     </div>
-                    <div class="catalogue-pre__return">
+                    <div class="catalogue-pre__return tabcontent" id="return1">
                         <div class="return-rate">
                             <p class="fs13">Доходность</p>
                             <p class="return-rate__number">~43 234 <sup class="fs13">Р/МЕС</sup></p>
@@ -460,6 +467,135 @@
                         <div class="after-year">
                             <p class="fs13">Через год</p>
                             <p class="after-year__number">~480 000 <sup class="fs13">Р</sup></p>
+                        </div>
+                    </div>
+
+                    <div class="catalogue-pre__table tabcontent" id="specs1">
+                        <div class="table">
+                            <div class="cell">
+                                Алгоритм хэширования
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                SHA-256 (подходит для майнинга Bitcoin (BTC), Peercoin (PPC), eMark (DEM) и других криптовалют.)
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Общий хэшрейт
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                14 TH/s ±5%
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Вид чипа
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                BM1387
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Техпроцесс
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                16nm
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Количество чипов
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                189 шт
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Условия работы
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0 °C to 40 °C
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергоэффективность
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0.1 W/GH/s
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергопотребление
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                1320W +10% при использовании
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Рабочая частота по умолчанию
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                600МГц
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Интерфейс сетевого подключения
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Ethernet
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Охлаждение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                2 вентилятора 12038 фирменного блока питания Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Напряжение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                11.60 ~13.00В
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Блок питания
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Блок питания входит в комплект Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Габаритные размеры устройства
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                350мм (длина) x 135мм (ширина) x 158мм (высота)
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -478,7 +614,7 @@
             <p class="aval"><span><img alt="" src="img/check.jpg"></span> Есть в наличии</p>
           </div>
         </div>
-      </div>
+    </div>
 
       <div class="catalogue__slide">
         <header class="catalogue__slide_header">
@@ -638,8 +774,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="catalogue-pre__block-nav">
+                    <button class="modal__nav tablinks modal__nav_active" onclick="openTab(event, 'order2')">Заказ</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'return2')">Доходность</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'specs2')">Характеристики</button>
+                </div>
+
                 <div class="catalogue-pre__block-aside">
-                    <div class="aside__content catalogue-pre__prepay">
+                    <div class="aside__content tabcontent catalogue-pre__prepay db" id="order2">
                         <div class="catalogue-pre__aval">
                             <div class="in-stock">
                                 <img alt="" src="img/check.jpg">
@@ -793,7 +936,7 @@
                         </div>
                     </div>
 
-                    <div class="catalogue-pre__return">
+                    <div class="catalogue-pre__return tabcontent" id="return2">
                         <div class="return-rate">
                             <p class="fs13">Доходность</p>
                             <p class="return-rate__number">~43 234 <sup class="fs13">Р/МЕС</sup></p>
@@ -805,6 +948,135 @@
                         <div class="after-year">
                             <p class="fs13">Через год</p>
                             <p class="after-year__number">~480 000 <sup class="fs13">Р</sup></p>
+                        </div>
+                    </div>
+
+                    <div class="catalogue-pre__table tabcontent" id="specs2">
+                        <div class="table">
+                            <div class="cell">
+                                Алгоритм хэширования
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                SHA-256 (подходит для майнинга Bitcoin (BTC), Peercoin (PPC), eMark (DEM) и других криптовалют.)
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Общий хэшрейт
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                14 TH/s ±5%
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Вид чипа
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                BM1387
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Техпроцесс
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                16nm
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Количество чипов
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                189 шт
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Условия работы
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0 °C to 40 °C
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергоэффективность
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0.1 W/GH/s
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергопотребление
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                1320W +10% при использовании
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Рабочая частота по умолчанию
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                600МГц
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Интерфейс сетевого подключения
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Ethernet
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Охлаждение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                2 вентилятора 12038 фирменного блока питания Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Напряжение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                11.60 ~13.00В
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Блок питания
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Блок питания входит в комплект Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Габаритные размеры устройства
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                350мм (длина) x 135мм (ширина) x 158мм (высота)
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -824,6 +1096,7 @@
           </div>
         </div>
       </div>
+
       <div class="catalogue__slide">
         <header class="catalogue__slide_header">
           <div class="slide__img"><img alt="" height="160" src="img/farm-03.png" width="194"></div>
@@ -983,8 +1256,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="catalogue-pre__block-nav">
+                    <button class="modal__nav tablinks modal__nav_active" onclick="openTab(event, 'order3')">Заказ</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'return3')">Доходность</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'specs3')">Характеристики</button>
+                </div>
+
                 <div class="catalogue-pre__block-aside">
-                    <div class="aside__content">
+                    <div class="aside__content tabcontent db" id="order3">
                         <div class="catalogue-pre__aval">
                             <div class="in-stock">
                                 <img alt="" src="img/check.jpg">
@@ -1118,7 +1398,7 @@
                             <p class="catalogue-pre__service-rent">5 000 <sup class="fs13">Р/МЕС</sup></p>
                         </div>
                     </div>
-                    <div class="catalogue-pre__return">
+                    <div class="catalogue-pre__return tabcontent" id="return3">
                         <div class="return-rate">
                             <p class="fs13">Доходность</p>
                             <p class="return-rate__number">~43 234 <sup class="fs13">Р/МЕС</sup></p>
@@ -1130,6 +1410,135 @@
                         <div class="after-year">
                             <p class="fs13">Через год</p>
                             <p class="after-year__number">~480 000 <sup class="fs13">Р</sup></p>
+                        </div>
+                    </div>
+
+                    <div class="catalogue-pre__table tabcontent" id="specs3">
+                        <div class="table">
+                            <div class="cell">
+                                Алгоритм хэширования
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                SHA-256 (подходит для майнинга Bitcoin (BTC), Peercoin (PPC), eMark (DEM) и других криптовалют.)
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Общий хэшрейт
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                14 TH/s ±5%
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Вид чипа
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                BM1387
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Техпроцесс
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                16nm
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Количество чипов
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                189 шт
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Условия работы
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0 °C to 40 °C
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергоэффективность
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0.1 W/GH/s
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергопотребление
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                1320W +10% при использовании
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Рабочая частота по умолчанию
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                600МГц
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Интерфейс сетевого подключения
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Ethernet
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Охлаждение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                2 вентилятора 12038 фирменного блока питания Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Напряжение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                11.60 ~13.00В
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Блок питания
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Блок питания входит в комплект Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Габаритные размеры устройства
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                350мм (длина) x 135мм (ширина) x 158мм (высота)
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1149,6 +1558,7 @@
           </div>
         </div>
       </div>
+      
       <div class="catalogue__slide">
         <header class="catalogue__slide_header">
           <div class="slide__img"><img alt="" height="182" src="img/farm-01.png" width="185"></div>
@@ -1308,8 +1718,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="catalogue-pre__block-nav">
+                    <button class="modal__nav tablinks modal__nav_active" onclick="openTab(event, 'order4')">Заказ</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'return4')">Доходность</button>
+                    <button class="modal__nav tablinks" onclick="openTab(event, 'specs4')">Характеристики</button>
+                </div>
+
                 <div class="catalogue-pre__block-aside">
-                    <div class="aside__content">
+                    <div class="aside__content tabcontent db" id="order4">
                         <div class="catalogue-pre__aval">
                             <div class="in-stock">
                                 <img alt="" src="img/check.jpg">
@@ -1443,7 +1860,7 @@
                             <p class="catalogue-pre__service-rent">5 000 <sup class="fs13">Р/МЕС</sup></p>
                         </div>
                     </div>
-                    <div class="catalogue-pre__return">
+                    <div class="catalogue-pre__return tabcontent" id="return4">
                         <div class="return-rate">
                             <p class="fs13">Доходность</p>
                             <p class="return-rate__number">~43 234 <sup class="fs13">Р/МЕС</sup></p>
@@ -1455,6 +1872,135 @@
                         <div class="after-year">
                             <p class="fs13">Через год</p>
                             <p class="after-year__number">~480 000 <sup class="fs13">Р</sup></p>
+                        </div>
+                    </div>
+
+                    <div class="catalogue-pre__table tabcontent" id="specs4">
+                        <div class="table">
+                            <div class="cell">
+                                Алгоритм хэширования
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                SHA-256 (подходит для майнинга Bitcoin (BTC), Peercoin (PPC), eMark (DEM) и других криптовалют.)
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Общий хэшрейт
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                14 TH/s ±5%
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Вид чипа
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                BM1387
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Техпроцесс
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                16nm
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Количество чипов
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                189 шт
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Условия работы
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0 °C to 40 °C
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергоэффективность
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                0.1 W/GH/s
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Энергопотребление
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                1320W +10% при использовании
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Рабочая частота по умолчанию
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                600МГц
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Интерфейс сетевого подключения
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Ethernet
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Охлаждение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                2 вентилятора 12038 фирменного блока питания Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Напряжение
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                11.60 ~13.00В
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Блок питания
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                Блок питания входит в комплект Bitmain APW3 1600W
+                            </div>
+                        </div>
+                        <div class="table">
+                            <div class="cell">
+                                Габаритные размеры устройства
+                            </div>
+                            <div class="cell-dot"></div>
+                            <div class="cell width450">
+                                350мм (длина) x 135мм (ширина) x 158мм (высота)
+                            </div>
                         </div>
                     </div>
                 </div>

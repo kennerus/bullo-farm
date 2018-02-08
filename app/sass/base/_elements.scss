@@ -380,12 +380,26 @@
     font-size: 13px;
     margin-top: 7px;
 
+    @include breakpoint(max-width 610px) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
     .cell {
         display: table-cell;
         width: 1px;
+
+        @include breakpoint(max-width 610px) {
+            display: block;
+        }
         
         &:first-child {
             white-space: nowrap;
+
+            @include breakpoint(max-width 610px) {
+                font-weight: bold;
+            }
         }
     }
 
@@ -394,6 +408,10 @@
 
         @include breakpoint(max-width 1200px) {
             width: 330px;
+        }
+
+        @include breakpoint(max-width 610px) {
+            width: auto;
         }
     }
 
@@ -404,6 +422,10 @@
     .cell-dot {
         position: relative;
         display: table-cell;
+
+        @include breakpoint(max-width 610px) {
+            display: none;
+        }
         
         &:before {
             content:'';
@@ -443,6 +465,7 @@
     display: none;
     width: 100vw;
     height: 100vh;
+    padding: 0;
     z-index: 999;
 
     .sent__overlay {
@@ -462,11 +485,22 @@
         width: 1120px;
         height: 440px;
         background-image: url(../img/sent-bg.png);
+        background-position: left;
         background-color: white;
+
+        @include breakpoint(max-width 768px) {
+            width: 90vw;
+            height: 400px;
+        }
     }
 
     .sent__text {
         margin-left: 350px;
+
+        @include breakpoint(max-width 768px) {
+            margin-left: auto;
+            margin-right: 20px;
+        }
 
         h2 {
             line-height: 1;
@@ -779,4 +813,12 @@
         margin-top: 0;
         border: none;
     }
+}
+
+.tabcontent {
+    display: none;
+}
+
+.db {
+    display: block !important;
 }
