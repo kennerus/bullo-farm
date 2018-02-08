@@ -111,8 +111,7 @@
 .catalogue-pre__cost,
 .catalogue-pre__service {
 	width: 100%;
-    padding-top: 25px;
-    padding-bottom: 20px;
+    padding: 25px 0;
     border-bottom: 1px solid #E5E5E5;
 }
 
@@ -150,16 +149,18 @@
 	    flex-wrap: wrap;
 	}
 
-	.in-stock {
+	.in-stock,
+	.catalogue-pre__number-buy {
 		display: none;
 	}
 
-	.prepay {
+	.prepay,
+	.catalogue-pre__cost {
 		display: block;
 	}
 }
 
-.catalogue-pre__number {
+.catalogue-pre__number-preorder {
 	display: flex;
 
 	.quantity {
@@ -219,7 +220,56 @@
 	}
 }
 
+.catalogue-pre__number-buy {
+	display: flex;
+	margin-top: 20px;
+	padding-top: 25px;
+	border-top: 1px solid #E5E5E5;
+
+	.catalogue-pre__number-price {
+		margin-top: 10px;
+		font-family: $montserrat;
+		font-size: 20px;
+	}
+
+	.catalogue-pre__buy {
+		padding-right: 30px;
+		border-right: 1px solid #E5E5E5;
+
+		.buy-button {
+			display: block;
+			width: 110px;
+			margin-top: 12px;
+			padding: 10px 0;
+			font-family: $montserrat;
+			color: white;
+			text-align: center;
+			border-radius: 2px;
+			background-color: #92278F;
+			box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);
+		}
+	}
+
+	.catalogue-pre__rent {
+		padding-left: 30px;
+
+		.rent__btn {
+			width: 130px;
+			margin-top: 12px;
+			padding: 9px 0;
+			font-family: $montserrat;
+			color: #3B424B;
+			text-align: center;
+			border: 1px solid #92278F;
+			border-radius: 2px;
+			background-color: #FFFFFF;
+		}
+	}
+}
+
 .catalogue-pre__cost {
+	display: none;
+
 	.catalogue-pre__cost-content {
 		display: flex;
 		justify-content: space-between;
@@ -239,6 +289,7 @@
 		cursor: pointer;
 	}
 	.price {
+
 		.greytext {
 			text-decoration: line-through;
 		}
