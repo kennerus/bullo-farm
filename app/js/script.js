@@ -1,6 +1,22 @@
 // open subject list
-var idHeader = document.getElementById('header_select');
-var idDelivery = document.getElementById('delivery_select');
+document.addEventListener('DOMContentLoaded', function () {
+    var idHeader = document.getElementById('header_select');
+    var idDelivery = document.getElementById('delivery_select');
+
+    if (idHeader) {
+        idHeader.addEventListener('click', function() {
+            openList(idHeader, 'filter__select_list', 'filter__select');
+        });
+        replaceSubject(idHeader, 'filter__select_list', 'filter__select_active');
+    }
+    if (idDelivery) {
+        idDelivery.addEventListener('click', function() {
+            openList(idDelivery, 'filter__select_list', 'filter__select');
+        });
+        replaceSubject(idDelivery, 'filter__select_list', 'filter__select_active');
+    }
+})
+
 function openList(subject, subjectList, filterWrap) {
     var list = subject.querySelector('.' + subjectList);
     var wrap = subject.querySelector('.' + filterWrap);
@@ -28,20 +44,6 @@ function replaceSubject(subject, subjectList, activeSubject) {
             declaredSubject.innerHTML = declaredSubject.innerHTML.replace(declaredSubject.innerHTML, this.innerHTML);
         });
     }
-}
-
-if (idHeader) {
-    idHeader.addEventListener('click', function() {
-        openList(idHeader, 'filter__select_list', 'filter__select');
-    });
-
-    replaceSubject(idHeader, 'filter__select_list', 'filter__select_active');
-}
-if (idDelivery) {
-    idDelivery.addEventListener('click', function() {
-        openList(idDelivery, 'filter__select_list', 'filter__select');
-    });
-    replaceSubject(idDelivery, 'filter__select_list', 'filter__select_active');
 }
 
 //tabs 
