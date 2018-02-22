@@ -550,7 +550,6 @@
     }
 
     
-
     .delivery__choise label {
         padding: 10px 25px;
 
@@ -838,5 +837,7 @@
 }
 
 .db {
-    display: block !important;
+    @include breakpoint(max-width 1023px) {
+        display: block !important;
+    }
 }

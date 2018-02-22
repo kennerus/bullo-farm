@@ -76,10 +76,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		width: 220px;
+		width: 235px;
 		height: 150px;
-		margin-right: 40px;
-		padding-right: 30px;
+		margin-right: 35px;
+		padding-right: 25px;
 		border-right: 1px solid #E5E5E5;
 
 		@include breakpoint(max-width 1200px) {
@@ -113,7 +113,8 @@
 		.group__desc {
 			height: 60px;
 			font-family: $montserrat;
-			line-height: 1.25;
+			font-size: 15px;
+			line-height: 1.33;
 
 			br {
 				display: none;
@@ -285,7 +286,7 @@
 .retailer__farms {
 	position: relative;
 	right: -20px;
-	min-width: 442px;
+	max-width: 442px;
 	width: 100%;
 	height: 282px;
 

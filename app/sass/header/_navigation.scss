@@ -74,11 +74,22 @@
 	}
 
 	.menu a {
+		position: relative;
 		font-size: 18px;
 		@include hoverOpacity;
 
 		&:hover {
-			border-bottom: 1px solid #788089;
+			&:before {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: block;
+				border-bottom: 1px solid #788089;
+				width: 97.8%;
+				margin: 0 auto;
+			}
 		}
 
 		@include breakpoint(max-width 767px) {
