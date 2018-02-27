@@ -113,6 +113,7 @@
 		.filter__buttons {
 			display: flex;
 			justify-content: flex-start;
+			margin-right: 10px;
 			
 			@include breakpoint(max-width 1200px) {
 				width: 370px;

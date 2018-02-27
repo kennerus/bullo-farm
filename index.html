@@ -8,6 +8,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Bullo Farm</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
     <link href="css/libs.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.min.css" rel="stylesheet" type="text/css">
 </head>
@@ -1344,7 +1345,7 @@
                                               <div class="delivery__choise">
                                                 <input checked id="to_techpark" name="where_deliver" type="radio">
                                                 <label for="to_techpark">В технопарк</label>
-                                                <input id="another_place" name="where_deliver" type="radio">
+                                                <input class="another_place" id="another_place" type="text" placeholder="В другое место" name="where_deliver">
                                                 
                                               </div>
                                             </div>
@@ -1806,7 +1807,7 @@
                                               <div class="delivery__choise">
                                                 <input checked id="to_techpark" name="where_deliver" type="radio">
                                                 <label for="to_techpark">В технопарк</label>
-                                                <input id="another_place" name="where_deliver" type="radio">
+                                                <input class="another_place" id="another_place" type="text" placeholder="В другое место" name="where_deliver">
                                                 
                                               </div>
                                             </div>
@@ -2497,6 +2498,7 @@
 <script src='js/jquery-3.2.1.min.js'></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
+<script src="js/count.js"></script>
 <script src="js/script.min.js"></script>
 </body>
 </html>

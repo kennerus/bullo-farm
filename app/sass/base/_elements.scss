@@ -18,7 +18,7 @@
 .filter__select_wrap {
     position: relative;
     width: 320px;
-    margin-right: 10px;
+    margin-right: 37px;
 
     @include breakpoint(max-width 1023px) {
         width: 230px;
@@ -335,6 +335,7 @@
     background-image: url(../img/header-bg.png);
     background-position-x: center;
     background-repeat: no-repeat;
+    background-size: 100% 26%;
 
     @include breakpoint(max-width 767px) {
         background: none;
@@ -345,12 +346,12 @@
 .page-wrap_about {
     background: url(../img/about.png) no-repeat,
     url(../img/header-bg.png) no-repeat;
-    background-position: 50% 21%,50% 0;
-    background-size: 100%, 100%;
+    background-position: 50% 32%, 50% 0;
+    background-size: 100% 18%, 100% 30%;
 
     @include breakpoint(max-width 1023px) {
-        background-position: 50% 26%,50% 0;
-        background-size: 130%,110%;
+        background-position: 50% 26%, 50% 0;
+        background-size: 130%, 110%;
     }
 
     @include breakpoint(max-width 767px) {
@@ -398,6 +399,10 @@
 
         @include breakpoint(max-width 1200px) {
             width: 330px;
+        }
+
+        @include breakpoint(max-width 576px) {
+             width: auto;
         }
     }
 
@@ -840,4 +845,9 @@
     @include breakpoint(max-width 1023px) {
         display: block !important;
     }
+}
+
+.fancybox-slide > * {
+    padding: 0;
+    margin: 0;
 }
