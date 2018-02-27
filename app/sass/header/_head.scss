@@ -2,6 +2,7 @@
 	background-image: url(../img/header-index-bg.png);
 	background-position-x: center;
 	background-repeat: no-repeat;
+	background-size: 100% 100%;
 
 	@include breakpoint(max-width 1200px) {
 		background-position-x: 42%;
@@ -15,6 +16,10 @@
 		background: none;
 		background-color: #F4F4F4;
 	}
+}
+
+.calculator__title {
+	font-size: 24px;
 }
 
 .mine__desc {
@@ -125,7 +130,7 @@
 		}
 
 		.filter__button {
-			padding: 10px 25px;
+			padding: 10px 35px;
 			background-color: white;
 			border: 1px solid #EBECF0;
 			cursor: pointer;
