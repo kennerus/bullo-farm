@@ -420,8 +420,9 @@
 .catalogue-pre__number-buy {
 	display: flex;
 	margin-top: 20px;
-	padding-top: 25px;
+	padding: 25px 0;
 	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
 
 	@include breakpoint(max-width 1200px) {
 		justify-content: space-between;
