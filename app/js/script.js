@@ -68,16 +68,6 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " modal__nav_active";
 }
 
-// // Get the element with id="defaultOpen" and click on it
-// var defaultOpen = document.getElementsByClassName("defaultOpen");
-
-
-
-// if(defaultOpen) {
-//     defaultOpen.click();
-// }
-
-
 $(function () {
 
     // $('#preorder__tel').mask('+7 (999) 999-99-99');

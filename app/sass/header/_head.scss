@@ -160,7 +160,7 @@
 	}
 
 	.calculator__desc {
-		display: flex;
+		display: none;
 
 		@include breakpoint(max-width 767px) {
 			flex-direction: column;
